@@ -175,17 +175,11 @@ POPUP
 
 }
 
-#closePopup{
-
-    width:100%;
-
-    padding:14px;
-
-    border-radius:14px;
-
-    background:#efefef;
+weight:bold;
 
 }
+
+
 /*==========================
 GAME CARD
 ==========================*/
