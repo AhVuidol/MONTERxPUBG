@@ -712,3 +712,44 @@ transform:rotate(360deg);
 
     color:#9f9f9f;
 }
+/* ===========================
+   BACK TO TOP
+=========================== */
+
+.back-to-top{
+
+    position:fixed;
+
+    right:20px;
+
+    bottom:20px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#0A84FF;
+
+    color:#fff;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    display:none;
+
+    z-index:9999;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+
+    transition:.3s;
+}
+
+.back-to-top:hover{
+
+    transform:scale(1.1);
+}
