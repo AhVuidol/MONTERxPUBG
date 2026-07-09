@@ -1,51 +1,48 @@
-/* ==========================
-   MONTERxPUBG V2
-========================== */
+/* ===================================
+   MONTERxPUBG
+=================================== */
 
 const popup = document.getElementById("popup");
 const closePopup = document.getElementById("closePopup");
 const okPopup = document.getElementById("okPopup");
-const hideBtn = document.querySelector(".hide-btn");
+const hidePopup = document.getElementById("hidePopup");
 const search = document.getElementById("search");
-const cards = document.querySelectorAll(".item");
 
-/* ==========================
-   POPUP
-========================== */
+function closeWindow(){
 
-function hidePopup(){
-    popup.style.opacity = "0";
+    popup.style.opacity="0";
 
     setTimeout(()=>{
-        popup.style.display = "none";
+
+        popup.style.display="none";
+
     },250);
+
 }
 
-closePopup.addEventListener("click",hidePopup);
-okPopup.addEventListener("click",hidePopup);
+closePopup.addEventListener("click",closeWindow);
+
+okPopup.addEventListener("click",closeWindow);
 
 /* ==========================
-   ẨN 1 GIỜ
+ẨN 1 GIỜ
 ========================== */
 
-hideBtn.addEventListener("click",()=>{
+hidePopup.addEventListener("click",()=>{
 
-    const oneHour = Date.now() + (60*60*1000);
+    const oneHour = Date.now()+3600000;
 
-    localStorage.setItem(
-        "popupHideUntil",
-        oneHour
-    );
+    localStorage.setItem("popupTime",oneHour);
 
-    hidePopup();
+    closeWindow();
 
 });
 
-const popupTime = localStorage.getItem("popupHideUntil");
+const popupTime = localStorage.getItem("popupTime");
 
 if(popupTime){
 
-    if(Date.now() < Number(popupTime)){
+    if(Date.now()<Number(popupTime)){
 
         popup.style.display="none";
 
@@ -54,16 +51,18 @@ if(popupTime){
 }
 
 /* ==========================
-   SEARCH
+SEARCH
 ========================== */
+
+const cards=document.querySelectorAll(".card");
 
 search.addEventListener("input",()=>{
 
-    const value = search.value.toLowerCase();
+    const value=search.value.toLowerCase();
 
     cards.forEach(card=>{
 
-        const text = card.innerText.toLowerCase();
+        const text=card.innerText.toLowerCase();
 
         if(text.includes(value)){
 
@@ -78,16 +77,15 @@ search.addEventListener("input",()=>{
     });
 
 });
-
 /* ==========================
-   CARD EFFECT
+CARD EFFECT
 ========================== */
 
 cards.forEach(card=>{
 
     card.addEventListener("click",()=>{
 
-        card.style.transform="scale(.97)";
+        card.style.transform="scale(.98)";
 
         setTimeout(()=>{
 
@@ -100,34 +98,16 @@ cards.forEach(card=>{
 });
 
 /* ==========================
-   LOADING
+HEADER SHADOW
 ========================== */
 
-window.addEventListener("load",()=>{
-
-    document.body.style.opacity="0";
-
-    setTimeout(()=>{
-
-        document.body.style.transition=".4s";
-
-        document.body.style.opacity="1";
-
-    },80);
-
-});
-
-/* ==========================
-   HEADER SHADOW
-========================== */
-
-const header = document.querySelector("header");
+const header=document.querySelector("header");
 
 window.addEventListener("scroll",()=>{
 
-    if(window.scrollY>10){
+    if(window.scrollY>5){
 
-        header.style.boxShadow="0 8px 20px rgba(0,0,0,.08)";
+        header.style.boxShadow="0 6px 20px rgba(0,0,0,.08)";
 
     }else{
 
@@ -138,30 +118,30 @@ window.addEventListener("scroll",()=>{
 });
 
 /* ==========================
-   SEARCH FOCUS
+SEARCH EFFECT
 ========================== */
 
 search.addEventListener("focus",()=>{
 
-    search.parentElement.style.transform="scale(1.01)";
+    search.style.boxShadow="0 0 0 3px rgba(10,132,255,.12)";
 
 });
 
 search.addEventListener("blur",()=>{
 
-    search.parentElement.style.transform="scale(1)";
+    search.style.boxShadow="0 2px 10px rgba(0,0,0,.05)";
 
 });
 
 /* ==========================
-   FADE CARD
+FADE IN
 ========================== */
 
 cards.forEach((card,index)=>{
 
     card.style.opacity="0";
 
-    card.style.transform="translateY(20px)";
+    card.style.transform="translateY(18px)";
 
     setTimeout(()=>{
 
@@ -171,6 +151,20 @@ cards.forEach((card,index)=>{
 
         card.style.transform="translateY(0)";
 
-    },index*80);
+    },index*70);
+
+});
+
+/* ==========================
+IMAGE FALLBACK
+========================== */
+
+document.querySelectorAll("img").forEach(img=>{
+
+    img.onerror=()=>{
+
+        img.src="https://placehold.co/56x56/e5e5e5/666?text=MP";
+
+    };
 
 });
