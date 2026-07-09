@@ -60,6 +60,7 @@ HEADER
     color:#fff;
     letter-spacing:.5px;
     margin:0;
+    animation:logoGlow 3s infinite alternate;
 }
 
 .header-text p{
@@ -305,6 +306,21 @@ GAME CARD
     position:relative;
 }
 
+.game-card{
+
+transition:.35s;
+
+}
+
+.game-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:
+0 0 30px #00aaff;
+
+}
+
 .game-card:hover{
 
     transform:translateY(-8px);
@@ -391,6 +407,81 @@ GAME CARD
 
     flex:1;
 
+}
+
+.buttons a{
+
+transition:.3s;
+
+}
+
+.buttons a:hover{
+
+transform:scale(1.06);
+
+}
+   
+/* ==========================
+RAINBOW BORDER
+========================== */
+
+body{
+
+background:
+radial-gradient(circle at top,#14233f,#0e1018 70%);
+}
+
+body{
+    position:relative;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    padding:3px;
+    background:linear-gradient(
+        90deg,
+        #ff0000,
+        #ff8800,
+        #ffee00,
+        #00ff66,
+        #00ccff,
+        #0066ff,
+        #aa00ff,
+        #ff0066,
+        #ff0000
+    );
+
+    background-size:500% 500%;
+
+    animation:borderMove 8s linear infinite;
+
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+    mask-composite:exclude;
+
+    pointer-events:none;
+
+    z-index:999999;
+}
+
+@keyframes borderMove{
+
+0%{
+background-position:0% 50%;
+}
+
+100%{
+background-position:500% 50%;
+}
+
+}
     text-decoration:none;
 
     text-align:center;
@@ -819,4 +910,58 @@ body::before{
     border-radius:14px;
     cursor:pointer;
     font-size:17px;
+}
+/* ===========================
+RGB BORDER
+=========================== */
+
+body{
+    overflow-x:hidden;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    padding:3px;
+    border-radius:0;
+
+    background:linear-gradient(
+        90deg,
+        #ff0000,
+        #ff8000,
+        #ffff00,
+        #00ff00,
+        #00ffff,
+        #0066ff,
+        #9900ff,
+        #ff0066,
+        #ff0000
+    );
+
+    background-size:600%;
+
+    animation:borderRGB 8s linear infinite;
+
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+    mask-composite:exclude;
+
+    pointer-events:none;
+    z-index:999999;
+}
+
+@keyframes borderRGB{
+
+0%{
+background-position:0%;
+}
+
+100%{
+background-position:600%;
+}
+
 }
