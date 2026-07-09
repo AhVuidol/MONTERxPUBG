@@ -193,15 +193,25 @@ MENU
 
 .category-bar{
 
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
+
     display:flex;
 
-    gap:12px;
+    gap:18px;
 
-    overflow:auto;
+    overflow-x:auto;
 
     padding:18px;
 
-    background:#0f1117;
+    background:#12141d;
+
+    backdrop-filter:blur(16px);
+
+    border-bottom:1px solid rgba(255,255,255,.05);
 
 }
 
@@ -350,31 +360,76 @@ GAME CARD
 
     display:flex;
 
-    gap:12px;
+    gap:14px;
 
-    padding:0 18px 18px;
+    padding:20px;
 
-}
-
-.buttons{
-    display:flex;
-    gap:16px;
-    padding:0 24px 24px;
 }
 
 .buttons a{
+
     flex:1;
+
+    text-decoration:none;
+
     text-align:center;
-    padding:18px 0;
-    border-radius:18px;
-    font-size:22px;
+
+    padding:18px;
+
+    border-radius:16px;
+
+    font-size:20px;
+
     font-weight:700;
-    transition:.3s ease;
+
+    transition:.25s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.buttons a::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:60%;
+
+    height:100%;
+
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.35),
+        transparent
+    );
+
+    transition:.7s;
+
+}
+
+.buttons a:hover::before{
+
+    left:150%;
+
+}
+
+.buttons a:active{
+
+    transform:scale(.96);
+
 }
 
 .buttons a:first-child{
 
-    background:linear-gradient(90deg,#0A84FF,#3B82F6);
+    background:linear-gradient(135deg,#007aff,#4da3ff);
 
     color:#fff;
 
@@ -382,9 +437,9 @@ GAME CARD
 
 .buttons a:last-child{
 
-    background:#2b3140;
+    background:#2a2f3b;
 
-    color:#fff;
+    color:#ffd84d;
 
 }
 
@@ -519,4 +574,46 @@ FOOTER
     border-bottom:1px solid rgba(255,255,255,.06);
 
     padding:14px 18px;
+}
+/* ==========================
+   CARD ANIMATION
+========================== */
+
+.game-card{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    animation:cardFade .6s ease forwards;
+
+}
+
+.game-card:nth-child(1){animation-delay:.05s;}
+.game-card:nth-child(2){animation-delay:.15s;}
+.game-card:nth-child(3){animation-delay:.25s;}
+.game-card:nth-child(4){animation-delay:.35s;}
+.game-card:nth-child(5){animation-delay:.45s;}
+.game-card:nth-child(6){animation-delay:.55s;}
+.game-card:nth-child(7){animation-delay:.65s;}
+.game-card:nth-child(8){animation-delay:.75s;}
+
+@keyframes cardFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
 }
