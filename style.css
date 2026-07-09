@@ -1,0 +1,183 @@
+/*==========================
+MONTERxPUBG
+==========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Arial,Helvetica,sans-serif;
+
+    background:#f5f5f7;
+
+    color:#111;
+
+    line-height:1.5;
+
+}
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+button{
+
+    border:none;
+
+    cursor:pointer;
+
+}
+
+section{
+
+    padding:20px;
+
+}
+/*==========================
+HEADER
+==========================*/
+
+.header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    padding:20px;
+
+    background:white;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
+
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+
+}
+
+.logo img{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:18px;
+
+    object-fit:cover;
+
+}
+
+.header-text h1{
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+.header-text p{
+
+    color:#777;
+
+    margin-top:4px;
+
+}
+/*==========================
+POPUP
+==========================*/
+
+.popup{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.55);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.popup-box{
+
+    width:90%;
+
+    max-width:380px;
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:25px;
+
+    text-align:center;
+
+}
+
+.popup-box h2{
+
+    margin-bottom:12px;
+
+}
+
+.popup-box p{
+
+    margin-bottom:18px;
+
+    color:#666;
+
+}
+
+.popup-btn{
+
+    display:block;
+
+    background:#0088ff;
+
+    color:white;
+
+    padding:14px;
+
+    border-radius:14px;
+
+    margin-bottom:12px;
+
+    font-weight:bold;
+
+}
+
+#closePopup{
+
+    width:100%;
+
+    padding:14px;
+
+    border-radius:14px;
+
+    background:#efefef;
+
+}
