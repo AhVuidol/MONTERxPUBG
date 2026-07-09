@@ -339,22 +339,20 @@ GAME CARD
 
 }
 
+.buttons{
+    display:flex;
+    gap:16px;
+    padding:0 24px 24px;
+}
+
 .buttons a{
-
     flex:1;
-
     text-align:center;
-
-    padding:14px;
-
-    border-radius:14px;
-
-    text-decoration:none;
-
+    padding:18px 0;
+    border-radius:18px;
+    font-size:22px;
     font-weight:700;
-
-    transition:.25s;
-
+    transition:.3s ease;
 }
 
 .buttons a:first-child{
@@ -374,9 +372,8 @@ GAME CARD
 }
 
 .buttons a:hover{
-
-    transform:scale(.97);
-
+    transform:translateY(-4px) scale(1.03);
+    filter:brightness(1.08);
 }
 /* =====================================
 FOOTER
