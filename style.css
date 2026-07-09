@@ -439,46 +439,29 @@ body{
 body::before{
     content:"";
     position:fixed;
-    inset:0;
-    padding:3px;
+    top:0;
+    left:0;
+    width:100%;
+    height:4px;
     background:linear-gradient(
         90deg,
-        #ff0000,
-        #ff8800,
-        #ffee00,
-        #00ff66,
-        #00ccff,
-        #0066ff,
-        #aa00ff,
-        #ff0066,
-        #ff0000
+        red,
+        orange,
+        yellow,
+        lime,
+        cyan,
+        blue,
+        violet,
+        red
     );
-
-    background-size:500% 500%;
-
-    animation:borderMove 8s linear infinite;
-
-    -webkit-mask:
-      linear-gradient(#fff 0 0) content-box,
-      linear-gradient(#fff 0 0);
-
-    -webkit-mask-composite:xor;
-
-    mask-composite:exclude;
-
-    pointer-events:none;
-
-    z-index:999999;
+    background-size:500%;
+    animation:rgbMove 6s linear infinite;
+    z-index:99999;
 }
 
-@keyframes borderMove{
-
-0%{
-background-position:0% 50%;
-}
-
-100%{
-background-position:500% 50%;
+@keyframes rgbMove{
+    0%{background-position:0%;}
+    100%{background-position:500%;}
 }
 
 }
