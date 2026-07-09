@@ -972,3 +972,196 @@ height:1px;
 background:#ececec;
 
 }
+/* =====================================
+   APP STORE STYLE V2
+===================================== */
+
+/* CARD */
+
+.item{
+
+border-radius:18px;
+
+overflow:hidden;
+
+}
+
+.item img{
+
+transition:.25s;
+
+}
+
+.item:hover img{
+
+transform:scale(1.05);
+
+}
+
+/* TITLE */
+
+.item-text h3{
+
+letter-spacing:-.3px;
+
+}
+
+/* DESCRIPTION */
+
+.item-text p{
+
+margin-top:5px;
+
+line-height:1.4;
+
+}
+
+/* CATEGORY */
+
+.section-title{
+
+margin-bottom:12px;
+
+}
+
+.section-title span{
+
+letter-spacing:-.4px;
+
+}
+
+.section-title small{
+
+min-width:58px;
+
+text-align:center;
+
+}
+
+/* SEARCH */
+
+.search{
+
+margin-bottom:8px;
+
+}
+
+.search input{
+
+background:#fff;
+
+border:1px solid #ececec;
+
+}
+
+.search input:hover{
+
+border-color:#d8d8d8;
+
+}
+
+/* LOGO */
+
+.logo{
+
+transition:.3s;
+
+}
+
+.logo:hover{
+
+transform:rotate(-6deg);
+
+}
+
+/* LIST */
+
+.list{
+
+transition:.3s;
+
+}
+
+.list:hover{
+
+box-shadow:
+
+0 12px 28px rgba(0,0,0,.08);
+
+}
+
+/* CARD HOVER */
+
+.item{
+
+transition:
+
+background .25s,
+
+transform .18s;
+
+}
+
+.item:hover{
+
+background:#fafafa;
+
+}
+
+.item:active{
+
+transform:scale(.985);
+
+}
+
+/* ARROW */
+
+.arrow{
+
+transition:.25s;
+
+}
+
+.item:hover .arrow{
+
+transform:translateX(4px);
+
+}
+
+/* FOOTER */
+
+footer{
+
+border-top:1px solid #ececec;
+
+background:#fff;
+
+}
+
+/* SMOOTH */
+
+img{
+
+user-select:none;
+
+-webkit-user-drag:none;
+
+}
+
+button{
+
+transition:.2s;
+
+}
+
+button:active{
+
+transform:scale(.97);
+
+}
+
+input{
+
+transition:.2s;
+
+}
