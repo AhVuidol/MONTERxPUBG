@@ -1,66 +1,95 @@
-/*==========================
-POPUP 2 GIỜ
-==========================*/
+/* ==========================================
+   POPUP + NHẠC
+========================================== */
 
 const popup = document.getElementById("popup");
 const closePopup = document.getElementById("closePopup");
+const joinDiscord = document.getElementById("joinDiscord");
 const bgmusic = document.getElementById("bgmusic");
 
-function playMusic(){
-    if(!bgmusic) return;
+function playMusic() {
+    if (!bgmusic) return;
 
-    bgmusic.play().catch(()=>{});
+    bgmusic.volume = 0.35;
+
+    bgmusic.play().catch(() => {});
 }
-// Kiểm tra thời gian
+
+// Ẩn popup nếu chưa hết 2 giờ
 const hideUntil = localStorage.getItem("hidePopupUntil");
 
-if (hideUntil && Date.now() < Number(hideUntil)) {
+if (popup && hideUntil && Date.now() < Number(hideUntil)) {
     popup.style.display = "none";
 }
 
-// Đóng popup trong 2 giờ
-closePopup.addEventListener("click", () => {
+// Nút Đóng
+if (closePopup) {
+    closePopup.addEventListener("click", () => {
 
-    playMusic();
-
-    popup.style.display = "none";
-
-    const twoHours = Date.now() + (2 * 60 * 60 * 1000);
-
-    localStorage.setItem("hidePopupUntil", twoHours);
-
-});
-
-    popup.style.display = "none";
-
-const twoHours = Date.now() + (2 * 60 * 60 * 1000);
-
-localStorage.setItem("hidePopupUntil", twoHours);
-
-});
-
-// Bấm ra ngoài để đóng trong 2 giờ
-popup.addEventListener("click", (e) => {
-
-    if (e.target === popup) {
+        playMusic();
 
         popup.style.display = "none";
 
-        const twoHours = Date.now() + (2 * 60 * 60 * 1000);
+        localStorage.setItem(
+            "hidePopupUntil",
+            Date.now() + 2 * 60 * 60 * 1000
+        );
 
-        localStorage.setItem("hidePopupUntil", twoHours);
+    });
+}
 
-    }
+// Nút Discord
+if (joinDiscord) {
+    joinDiscord.addEventListener("click", () => {
 
-});
+        playMusic();
+
+    });
+}
+
+// Bấm nền đen để đóng
+if (popup) {
+
+    popup.addEventListener("click", (e) => {
+
+        if (e.target === popup) {
+
+            popup.style.display = "none";
+
+            localStorage.setItem(
+                "hidePopupUntil",
+                Date.now() + 2 * 60 * 60 * 1000
+            );
+
+        }
+
+    });
+
+}
+
+/* ==========================================
+   LOADER
+========================================== */
+
 window.addEventListener("load", () => {
+
     setTimeout(() => {
-        document.getElementById("loader").style.display = "none";
+
+        const loader = document.getElementById("loader");
+
+        if (loader) {
+
+            loader.style.display = "none";
+
+        }
+
     }, 600);
+
 });
-/* ===========================
+
+/* ==========================================
    SEARCH GAME
-=========================== */
+========================================== */
 
 const searchInput = document.getElementById("searchInput");
 
@@ -70,34 +99,27 @@ if (searchInput) {
 
         const keyword = this.value.toLowerCase();
 
-        const cards = document.querySelectorAll(".game-card");
+        document.querySelectorAll(".game-card").forEach(card => {
 
-        cards.forEach(card => {
-
-            const text = card.innerText.toLowerCase();
-
-            if (text.includes(keyword)) {
-
-                card.style.display = "block";
-
-            } else {
-
-                card.style.display = "none";
-
-            }
+            card.style.display = card.innerText.toLowerCase().includes(keyword)
+                ? "block"
+                : "none";
 
         });
 
     });
 
 }
-/* ===========================
+
+/* ==========================================
    BACK TO TOP
-=========================== */
+========================================== */
 
 const backToTop = document.getElementById("backToTop");
 
 window.addEventListener("scroll", () => {
+
+    if (!backToTop) return;
 
     if (window.scrollY > 300) {
 
@@ -111,54 +133,40 @@ window.addEventListener("scroll", () => {
 
 });
 
-backToTop.addEventListener("click", () => {
+if (backToTop) {
 
-    window.scrollTo({
+    backToTop.addEventListener("click", () => {
 
-        top: 0,
+        window.scrollTo({
 
-        behavior: "smooth"
+            top: 0,
+
+            behavior: "smooth"
+
+        });
 
     });
 
-});
-window.addEventListener("scroll",()=>{
+}
 
-    const winScroll=
-        document.documentElement.scrollTop;
+/* ==========================================
+   THANH TIẾN TRÌNH CUỘN
+========================================== */
 
-    const height=
-        document.documentElement.scrollHeight-
+window.addEventListener("scroll", () => {
+
+    const scrollBar = document.getElementById("scrollBar");
+
+    if (!scrollBar) return;
+
+    const winScroll = document.documentElement.scrollTop;
+
+    const height =
+        document.documentElement.scrollHeight -
         document.documentElement.clientHeight;
 
-    const scrolled=(winScroll/height)*100;
+    const percent = (winScroll / height) * 100;
 
-    document.getElementById("scrollBar").style.width=scrolled+"%";
+    scrollBar.style.width = percent + "%";
 
 });
-const bgmusic = document.getElementById("bgmusic");
-const joinDiscord = document.getElementById("joinDiscord");
-if (joinDiscord) {
-    joinDiscord.addEventListener("click", () => {
-        playMusic();
-    });
-}
-
-if(music){
-
-music.volume=0.35;
-
-music.play().catch(()=>{});
-
-}
-const joinDiscord = document.getElementById("joinDiscord");
-
-if(joinDiscord){
-
-    joinDiscord.addEventListener("click",()=>{
-
-        playMusic();
-
-    });
-
-}
