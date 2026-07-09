@@ -81,19 +81,8 @@ header p{
 
 /* Card */
 
-.item{
-    background:#fff;
-    margin:12px 20px;
-    border-radius:18px;
-    padding:18px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    text-decoration:none;
-    color:#111;
-    transition:.25s;
-    box-shadow:0 2px 12px rgba(0,0,0,.05);
-}
+Card */
+
 
 .item:hover{
     transform:scale(.98);
