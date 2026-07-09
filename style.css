@@ -10,13 +10,18 @@ MONTERxPUBG
 
 body{
 
-    font-family:Arial,Helvetica,sans-serif;
+    font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Display",
+    "Segoe UI",
+    sans-serif;
 
-    background:#f5f5f7;
+    background:#f2f2f7;
 
-    color:#111;
+    color:#111111;
 
-    line-height:1.5;
+    line-height:1.6;
 
 }
 
@@ -57,11 +62,11 @@ HEADER
 
     align-items:center;
 
-    gap:16px;
+    gap:18px;
 
-    padding:20px;
+    padding:18px 20px;
 
-    background:white;
+    background:#ffffff;
 
     position:sticky;
 
@@ -69,17 +74,17 @@ HEADER
 
     z-index:999;
 
-    box-shadow:0 2px 15px rgba(0,0,0,.08);
+    border-bottom:1px solid #ececec;
 
 }
 
 .logo img{
 
-    width:70px;
+    width:72px;
 
-    height:70px;
+    height:72px;
 
-    border-radius:18px;
+    border-radius:20px;
 
     object-fit:cover;
 
@@ -87,17 +92,17 @@ HEADER
 
 .header-text h1{
 
-    font-size:28px;
+    font-size:32px;
 
-    font-weight:700;
+    font-weight:800;
 
 }
 
 .header-text p{
 
-    color:#777;
+    color:#8e8e93;
 
-    margin-top:4px;
+    font-size:18px;
 
 }
 /*==========================
@@ -187,31 +192,34 @@ GAME CARD
 
 .category{
 
-    padding:20px;
+    padding:24px 18px;
 
 }
 
 .category h2{
 
-    font-size:26px;
+    font-size:34px;
 
-    margin-bottom:18px;
+    font-weight:800;
 
-    font-weight:700;
+    margin-bottom:20px;
 
 }
 
 .game-card{
 
-    background:white;
+    background:#ffffff;
 
-    border-radius:22px;
+    border-radius:26px;
+
+    padding:18px;
+
+    margin-bottom:24px;
+
+    box-shadow:
+    0 8px 30px rgba(0,0,0,.06);
 
     overflow:hidden;
-
-    margin-bottom:22px;
-
-    box-shadow:0 8px 25px rgba(0,0,0,.08);
 
 }
 
@@ -219,25 +227,36 @@ GAME CARD
 
     width:100%;
 
+    height:auto;
+
     aspect-ratio:16/9;
 
     object-fit:cover;
 
-}
+    border-radius:18px;
 
+    background:#ececec;
+
+    margin-bottom:18px;
+
+}
 .game-card h3{
 
-    font-size:24px;
+    font-size:30px;
 
-    padding:18px 18px 8px;
+    font-weight:800;
+
+    margin-bottom:6px;
 
 }
 
 .game-card p{
 
-    color:#777;
+    color:#8e8e93;
 
-    padding:0 18px 18px;
+    font-size:18px;
+
+    margin-bottom:18px;
 
 }
 /*==========================
@@ -248,9 +267,7 @@ BUTTONS
 
     display:flex;
 
-    gap:12px;
-
-    padding:0 18px 20px;
+    gap:14px;
 
 }
 
@@ -260,13 +277,13 @@ BUTTONS
 
     text-align:center;
 
-    padding:14px;
+    padding:16px;
 
-    border-radius:14px;
+    border-radius:16px;
+
+    font-size:19px;
 
     font-weight:700;
-
-    transition:.25s;
 
 }
 
