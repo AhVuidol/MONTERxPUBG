@@ -806,3 +806,42 @@ transform:rotate(360deg);
 
     background:#0A84FF;
 }
+/* ===========================
+   GAME CARD EFFECT
+=========================== */
+
+.game-card{
+
+    transition:.3s ease;
+
+    overflow:hidden;
+
+    border-radius:22px;
+}
+
+.game-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+}
+
+.game-card img{
+
+    transition:.35s ease;
+}
+
+.game-card:hover img{
+
+    transform:scale(1.05);
+}
+
+.buttons a{
+
+    transition:.25s ease;
+}
+
+.buttons a:hover{
+
+    transform:scale(1.05);
+}
