@@ -46,3 +46,36 @@ document.getElementById("loader").style.display="none";
 },600);
 
 });
+/* ===========================
+   SEARCH GAME
+=========================== */
+
+const searchInput = document.getElementById("searchInput");
+
+if (searchInput) {
+
+    searchInput.addEventListener("keyup", function () {
+
+        const keyword = this.value.toLowerCase();
+
+        const cards = document.querySelectorAll(".game-card");
+
+        cards.forEach(card => {
+
+            const text = card.innerText.toLowerCase();
+
+            if (text.includes(keyword)) {
+
+                card.style.display = "block";
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+    });
+
+}
