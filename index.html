@@ -456,7 +456,7 @@ Tham Gia Telegram
 
 </a>
 
-<button id="closePopup">
+<button id="closePopup" class="close-btn">
 
 Đóng
 
@@ -465,3 +465,14 @@ Tham Gia Telegram
 </div>
 
 </div>
+popup.addEventListener("click",(e)=>{
+
+    if(e.target===popup){
+
+        popup.style.display="none";
+
+        localStorage.setItem("popupClosed","true");
+
+    }
+
+});
