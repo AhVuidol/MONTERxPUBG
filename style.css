@@ -231,7 +231,7 @@ MENU
     align-items:center;
     justify-content:center;
 
-    padding:14px 26px;
+    padding:18px 22px;
 
     border-radius:999px;
 
@@ -752,5 +752,10 @@ body::before{
         rotateX(2deg)
         rotateY(-2deg)
         translateY(-8px);
+
+}
+.games{
+
+    padding-bottom:80px;
 
 }
