@@ -37,14 +37,10 @@ popup.addEventListener("click", (e) => {
     }
 
 });
-window.addEventListener("load",()=>{
-
-setTimeout(()=>{
-
-document.getElementById("loader").style.display="none";
-
-},600);
-
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        document.getElementById("loader").style.display = "none";
+    }, 600);
 });
 /* ===========================
    SEARCH GAME
