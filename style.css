@@ -18,40 +18,72 @@ body{
 /* HEADER */
 
 header{
-    display:flex;
-    align-items:center;
-    gap:18px;
-    padding:24px;
-    background:#fff;
     position:sticky;
     top:0;
-    z-index:100;
+    z-index:999;
+
+    display:flex;
+    align-items:center;
+
+    gap:16px;
+
+    padding:22px;
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+
     border-bottom:1px solid #ececec;
 }
 
 .logo{
-    width:72px;
-    height:72px;
-    border-radius:22px;
-    background:#111;
-    color:#fff;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:30px;
-    font-weight:800;
-    flex-shrink:0;
+
+width:62px;
+height:62px;
+
+border-radius:18px;
+
+background:#111;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+color:#fff;
+
+font-size:28px;
+
+font-weight:800;
+
+flex-shrink:0;
+
+box-shadow:
+
+0 8px 20px rgba(0,0,0,.12);
+
 }
 
 header h1{
-    font-size:28px;
-    font-weight:800;
+
+font-size:32px;
+
+font-weight:800;
+
+letter-spacing:-.5px;
+
 }
 
 header p{
-    color:#888;
-    margin-top:5px;
-    font-size:15px;
+
+margin-top:4px;
+
+font-size:16px;
+
+color:#8a8a8a;
+
+font-weight:500;
+
 }
 
 /* SEARCH */
