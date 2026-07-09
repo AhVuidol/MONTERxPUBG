@@ -154,7 +154,8 @@ RAINBOW
 
 .rainbow-text{
 
-    display:inline-block;
+    display:inline-flex;
+    white-space: nowrap;
 
     padding-left:100%;
 
