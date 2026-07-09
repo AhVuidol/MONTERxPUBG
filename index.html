@@ -19,6 +19,8 @@
 
 <body>
 
+<div id="scrollBar"></div>
+
 <!-- LOADER -->
 
 <div id="loader">
@@ -685,3 +687,22 @@ SCRIPT
 <script src="script.js"></script>
 </body>
 </html>
+#scrollBar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:0;
+
+    height:4px;
+
+    background:linear-gradient(90deg,#00e5ff,#007aff,#8b5cf6);
+
+    z-index:9999;
+
+    transition:.15s;
+
+}
