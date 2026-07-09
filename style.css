@@ -975,3 +975,49 @@ text-shadow:
 }
 
 }
+/* ==========================
+   RGB BORDER PREMIUM
+========================== */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    padding:3px;
+    border-radius:0;
+    background:linear-gradient(
+        90deg,
+        #ff0000,
+        #ff7a00,
+        #ffff00,
+        #00ff55,
+        #00e5ff,
+        #0066ff,
+        #9d00ff,
+        #ff0088,
+        #ff0000
+    );
+    background-size:600%;
+    animation:borderMove 8s linear infinite;
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+            mask-composite:exclude;
+
+    pointer-events:none;
+    z-index:99999;
+}
+@keyframes borderMove{
+
+0%{
+background-position:0%;
+}
+
+100%{
+background-position:600%;
+}
+
+}
