@@ -14,15 +14,17 @@ html{
 
 body{
 
-    background:#0f1118;
+    margin:0;
+
+    padding:0;
+
+    background:#111827;
 
     color:#fff;
 
-    font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "SF Pro Display",
-    sans-serif;
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;
+
+    overflow-x:hidden;
 
 }
 
@@ -445,57 +447,7 @@ box-shadow:
 transform:scale(1.06);
 
 }
-   
-/* =========================
-   RGB BORDER PREMIUM
-========================= */
 
-body::before{
-    content:"";
-    position:fixed;
-    inset:0;
-    padding:3px;
-
-    background:linear-gradient(
-        90deg,
-        #ff0000,
-        #ff7a00,
-        #ffff00,
-        #00ff55,
-        #00e5ff,
-        #0066ff,
-        #9d00ff,
-        #ff0088,
-        #ff0000
-    );
-
-    background-size:600%;
-
-    animation:rgbBorder 8s linear infinite;
-
-    -webkit-mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-
-    -webkit-mask-composite:xor;
-            mask-composite:exclude;
-
-    pointer-events:none;
-
-    z-index:999999;
-}
-
-@keyframes rgbBorder{
-
-    0%{
-        background-position:0%;
-    }
-
-    100%{
-        background-position:600%;
-    }
-
-}
     text-decoration:none;
 
     text-align:center;
@@ -968,17 +920,6 @@ body::before{
     z-index:999999;
 }
 
-@keyframes borderRGB{
-
-0%{
-background-position:0%;
-}
-
-100%{
-background-position:600%;
-}
-
-}
 @keyframes logoGlow{
 
 0%{
