@@ -120,3 +120,12 @@ window.addEventListener("scroll",()=>{
     document.getElementById("scrollBar").style.width=scrolled+"%";
 
 });
+const music=document.getElementById("bgMusic");
+
+if(music){
+
+music.volume=0.35;
+
+music.play().catch(()=>{});
+
+}
