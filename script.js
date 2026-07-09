@@ -145,3 +145,14 @@ music.volume=0.35;
 music.play().catch(()=>{});
 
 }
+const joinDiscord = document.getElementById("joinDiscord");
+
+if(joinDiscord){
+
+    joinDiscord.addEventListener("click",()=>{
+
+        playMusic();
+
+    });
+
+}
