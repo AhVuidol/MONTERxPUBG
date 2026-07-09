@@ -181,3 +181,128 @@ POPUP
     background:#efefef;
 
 }
+/*==========================
+GAME CARD
+==========================*/
+
+.category{
+
+    padding:20px;
+
+}
+
+.category h2{
+
+    font-size:26px;
+
+    margin-bottom:18px;
+
+    font-weight:700;
+
+}
+
+.game-card{
+
+    background:white;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    margin-bottom:22px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+}
+
+.game-card img{
+
+    width:100%;
+
+    aspect-ratio:16/9;
+
+    object-fit:cover;
+
+}
+
+.game-card h3{
+
+    font-size:24px;
+
+    padding:18px 18px 8px;
+
+}
+
+.game-card p{
+
+    color:#777;
+
+    padding:0 18px 18px;
+
+}
+/*==========================
+BUTTONS
+==========================*/
+
+.buttons{
+
+    display:flex;
+
+    gap:12px;
+
+    padding:0 18px 20px;
+
+}
+
+.buttons a{
+
+    flex:1;
+
+    text-align:center;
+
+    padding:14px;
+
+    border-radius:14px;
+
+    font-weight:700;
+
+    transition:.25s;
+
+}
+
+.buttons a:first-child{
+
+    background:#007AFF;
+
+    color:white;
+
+}
+
+.buttons a:last-child{
+
+    background:#F2F2F7;
+
+    color:#111;
+
+}
+
+.buttons a:hover{
+
+    transform:translateY(-2px);
+
+}
+/*==========================
+FOOTER
+==========================*/
+
+footer{
+
+    padding:35px;
+
+    text-align:center;
+
+    color:#777;
+
+    font-size:15px;
+
+}
