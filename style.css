@@ -1,11 +1,16 @@
-/*==========================
+/*====================================
 MONTERxPUBG
-==========================*/
+Version 1.0
+====================================*/
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
@@ -19,7 +24,7 @@ body{
 
     background:#f2f2f7;
 
-    color:#111111;
+    color:#111;
 
     line-height:1.6;
 
@@ -27,7 +32,7 @@ body{
 
 img{
 
-    max-width:100%;
+    width:100%;
 
     display:block;
 
@@ -41,20 +46,20 @@ a{
 
 button{
 
-    border:none;
-
     cursor:pointer;
+
+    border:none;
 
 }
 
 section{
 
-    padding:20px;
+    padding:22px;
 
 }
-/*==========================
+/*====================================
 HEADER
-==========================*/
+====================================*/
 
 .header{
 
@@ -64,9 +69,9 @@ HEADER
 
     gap:18px;
 
-    padding:18px 20px;
+    padding:18px 22px;
 
-    background:#ffffff;
+    background:white;
 
     position:sticky;
 
@@ -74,7 +79,7 @@ HEADER
 
     z-index:999;
 
-    border-bottom:1px solid #ececec;
+    box-shadow:0 2px 15px rgba(0,0,0,.06);
 
 }
 
@@ -84,7 +89,7 @@ HEADER
 
     height:72px;
 
-    border-radius:20px;
+    border-radius:18px;
 
     object-fit:cover;
 
@@ -92,7 +97,7 @@ HEADER
 
 .header-text h1{
 
-    font-size:32px;
+    font-size:30px;
 
     font-weight:800;
 
@@ -102,12 +107,59 @@ HEADER
 
     color:#8e8e93;
 
-    font-size:18px;
+    margin-top:4px;
 
 }
-/*==========================
+/*====================================
+ANNOUNCEMENT
+====================================*/
+
+.announcement{
+
+    margin:18px;
+
+    background:#007AFF;
+
+    color:white;
+
+    border-radius:18px;
+
+    padding:16px 18px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.announcement span{
+
+    font-size:16px;
+
+    font-weight:600;
+
+}
+
+.announcement a{
+
+    background:white;
+
+    color:#007AFF;
+
+    padding:10px 18px;
+
+    border-radius:12px;
+
+    font-weight:700;
+
+}
+/*====================================
 POPUP
-==========================*/
+====================================*/
 
 .popup{
 
@@ -123,27 +175,33 @@ POPUP
 
     align-items:center;
 
+    padding:20px;
+
     z-index:9999;
 
 }
 
 .popup-box{
 
-    width:90%;
+    width:100%;
 
-    max-width:380px;
+    max-width:420px;
 
-    background:white;
+    background:#fff;
 
-    border-radius:22px;
+    border-radius:24px;
 
-    padding:25px;
+    padding:28px;
 
     text-align:center;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
 
 }
 
 .popup-box h2{
+
+    font-size:28px;
 
     margin-bottom:12px;
 
@@ -151,9 +209,11 @@ POPUP
 
 .popup-box p{
 
-    margin-bottom:18px;
-
     color:#666;
+
+    margin-bottom:22px;
+
+    font-size:17px;
 
 }
 
@@ -161,59 +221,78 @@ POPUP
 
     display:block;
 
-    background:#0088ff;
+    width:100%;
 
-    color:white;
+    background:#007AFF;
 
-    padding:14px;
+    color:#fff;
 
-    border-radius:14px;
+    padding:16px;
+
+    border-radius:16px;
+
+    font-weight:700;
 
     margin-bottom:12px;
 
-    font-weight:bold;
-
 }
 
-weight:bold;
+.close-btn{
+
+    width:100%;
+
+    background:#F2F2F7;
+
+    color:#007AFF;
+
+    padding:16px;
+
+    border-radius:16px;
+
+    font-size:17px;
+
+    font-weight:700;
 
 }
-
-
-/*==========================
+/*====================================
 GAME CARD
-==========================*/
+====================================*/
 
 .category{
 
-    padding:24px 18px;
+    padding:24px 20px;
 
 }
 
 .category h2{
 
-    font-size:34px;
-
-    font-weight:800;
+    font-size:30px;
 
     margin-bottom:20px;
+
+    font-weight:800;
 
 }
 
 .game-card{
 
-    background:#ffffff;
+    background:#fff;
 
-    border-radius:26px;
+    border-radius:24px;
 
-    padding:18px;
+    overflow:hidden;
 
     margin-bottom:24px;
 
-    box-shadow:
-    0 8px 30px rgba(0,0,0,.06);
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
 
-    overflow:hidden;
+    transition:.25s;
+
+}
+
+.game-card:hover{
+
+    transform:translateY(-4px);
 
 }
 
@@ -221,26 +300,17 @@ GAME CARD
 
     width:100%;
 
-    height:auto;
-
     aspect-ratio:16/9;
 
     object-fit:cover;
 
-    border-radius:18px;
-
-    background:#ececec;
-
-    margin-bottom:18px;
-
 }
+
 .game-card h3{
 
-    font-size:30px;
+    font-size:24px;
 
-    font-weight:800;
-
-    margin-bottom:6px;
+    padding:18px 18px 6px;
 
 }
 
@@ -248,20 +318,20 @@ GAME CARD
 
     color:#8e8e93;
 
-    font-size:18px;
-
-    margin-bottom:18px;
+    padding:0 18px 18px;
 
 }
-/*==========================
-BUTTONS
-==========================*/
+/*====================================
+BUTTON
+====================================*/
 
 .buttons{
 
     display:flex;
 
-    gap:14px;
+    gap:12px;
+
+    padding:0 18px 20px;
 
 }
 
@@ -271,13 +341,13 @@ BUTTONS
 
     text-align:center;
 
-    padding:16px;
+    padding:14px;
 
-    border-radius:16px;
-
-    font-size:19px;
+    border-radius:14px;
 
     font-weight:700;
+
+    transition:.25s;
 
 }
 
@@ -299,21 +369,188 @@ BUTTONS
 
 .buttons a:hover{
 
-    transform:translateY(-2px);
+    transform:scale(.98);
 
 }
-/*==========================
+/*====================================
 FOOTER
-==========================*/
+====================================*/
 
-footer{
+.footer{
 
-    padding:35px;
+    margin-top:40px;
+
+    padding:40px 20px;
+
+    background:#ffffff;
 
     text-align:center;
 
-    color:#777;
+    border-top:1px solid #e5e5e5;
 
-    font-size:15px;
+}
+
+.footer-logo img{
+
+    width:80px;
+
+    height:80px;
+
+    margin:auto;
+
+    border-radius:20px;
+
+}
+
+.footer h2{
+
+    margin-top:15px;
+
+    font-size:28px;
+
+    font-weight:800;
+
+}
+
+.footer p{
+
+    margin-top:8px;
+
+    color:#8e8e93;
+
+}
+
+.social{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin:25px 0;
+
+    flex-wrap:wrap;
+
+}
+
+.social a{
+
+    background:#007AFF;
+
+    color:white;
+
+    padding:12px 18px;
+
+    border-radius:14px;
+
+    font-weight:700;
+
+    transition:.25s;
+
+}
+
+.social a:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.copyright{
+
+    font-size:14px;
+
+    color:#999;
+
+}
+/*====================================
+RESPONSIVE
+====================================*/
+
+@media (max-width:768px){
+
+.header{
+
+    padding:16px;
+
+}
+
+.logo img{
+
+    width:60px;
+
+    height:60px;
+
+}
+
+.header-text h1{
+
+    font-size:24px;
+
+}
+
+.header-text p{
+
+    font-size:14px;
+
+}
+
+.category h2{
+
+    font-size:24px;
+
+}
+
+.game-card h3{
+
+    font-size:20px;
+
+}
+
+.buttons{
+
+    flex-direction:column;
+
+}
+
+.buttons a{
+
+    width:100%;
+
+}
+
+.announcement{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+.announcement a{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+.social{
+
+    flex-direction:column;
+
+}
+
+.social a{
+
+    width:100%;
+
+}
+
+.popup-box{
+
+    padding:22px;
+
+}
 
 }
