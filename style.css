@@ -464,3 +464,24 @@ FOOTER
     font-size:14px;
 
 }
+.install{
+    background:linear-gradient(135deg,#0A84FF,#4DA3FF);
+    color:#fff !important;
+    box-shadow:0 10px 25px rgba(10,132,255,.35);
+}
+
+.install:hover{
+    transform:translateY(-4px);
+    filter:brightness(1.08);
+}
+
+.key{
+    background:linear-gradient(135deg,#FFD54A,#FFB300);
+    color:#111 !important;
+    box-shadow:0 10px 25px rgba(255,193,7,.35);
+}
+
+.key:hover{
+    transform:translateY(-4px);
+    filter:brightness(1.08);
+}
