@@ -10,9 +10,15 @@
 }
 
 body{
-    background:#f2f2f7;
-    color:#111;
-    -webkit-font-smoothing:antialiased;
+
+background:#f2f2f7;
+
+color:#111;
+
+overflow-x:hidden;
+
+-webkit-font-smoothing:antialiased;
+
 }
 
 /* HEADER */
