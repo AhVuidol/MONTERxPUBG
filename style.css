@@ -759,3 +759,64 @@ body::before{
     padding-bottom:80px;
 
 }
+/* ==========================
+   POPUP
+========================== */
+
+.popup{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+}
+
+.popup-box{
+    width:90%;
+    max-width:420px;
+    background:#1b1d28;
+    border-radius:20px;
+    padding:28px;
+    text-align:center;
+    box-shadow:0 20px 60px rgba(0,0,0,.5);
+}
+
+.popup-box h2{
+    color:#fff;
+    margin-bottom:15px;
+    font-size:30px;
+}
+
+.popup-box p{
+    color:#cfcfcf;
+    margin-bottom:25px;
+    line-height:1.6;
+}
+
+.popup-btn{
+    display:block;
+    text-decoration:none;
+    background:#5865F2;
+    color:#fff;
+    padding:18px;
+    border-radius:14px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.popup-btn:hover{
+    transform:scale(1.03);
+}
+
+.close-btn{
+    width:100%;
+    border:none;
+    background:#303340;
+    color:#fff;
+    padding:16px;
+    border-radius:14px;
+    cursor:pointer;
+    font-size:17px;
+}
