@@ -471,3 +471,258 @@ footer{
     margin-top:40px;
 
 }
+/* ======================================
+   RESPONSIVE IPHONE
+====================================== */
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+body{
+
+overflow-x:hidden;
+
+}
+
+/* Hiệu ứng xuất hiện */
+
+section{
+
+animation:fadeUp .45s ease;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* Header */
+
+header{
+
+backdrop-filter:blur(18px);
+
+-webkit-backdrop-filter:blur(18px);
+
+}
+
+/* Search */
+
+.search{
+
+position:sticky;
+
+top:98px;
+
+z-index:90;
+
+background:#f2f2f7;
+
+padding-top:15px;
+
+padding-bottom:15px;
+
+}
+
+.search input{
+
+transition:.25s;
+
+}
+
+.search input::placeholder{
+
+color:#9a9a9a;
+
+}
+
+/* Card */
+
+.item{
+
+min-height:88px;
+
+}
+
+.item:hover{
+
+background:#f7f7f7;
+
+}
+
+.item:active{
+
+transform:scale(.98);
+
+}
+
+/* Logo */
+
+.logo{
+
+box-shadow:
+
+0 10px 25px rgba(0,0,0,.12);
+
+}
+
+/* Popup */
+
+.popup-box{
+
+box-shadow:
+
+0 20px 50px rgba(0,0,0,.25);
+
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+
+width:0;
+
+}
+
+/* Footer */
+
+footer{
+
+padding-bottom:80px;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+header{
+
+padding:18px;
+
+}
+
+.logo{
+
+width:60px;
+
+height:60px;
+
+font-size:24px;
+
+border-radius:18px;
+
+}
+
+header h1{
+
+font-size:24px;
+
+}
+
+header p{
+
+font-size:14px;
+
+}
+
+.section-title span{
+
+font-size:18px;
+
+}
+
+.item img{
+
+width:50px;
+
+height:50px;
+
+}
+
+.item h3{
+
+font-size:16px;
+
+}
+
+.item p{
+
+font-size:13px;
+
+}
+
+.arrow{
+
+width:32px;
+
+height:32px;
+
+font-size:18px;
+
+}
+
+.popup-box{
+
+padding:20px;
+
+border-radius:20px;
+
+}
+
+.popup-header h2{
+
+font-size:20px;
+
+}
+
+.popup-links a{
+
+font-size:16px;
+
+}
+
+.hide-btn,
+
+.ok-btn{
+
+padding:10px 16px;
+
+font-size:14px;
+
+}
+
+}
+
+/* iPhone Safe Area */
+
+body{
+
+padding-bottom:env(safe-area-inset-bottom);
+
+}
+
+footer{
+
+padding-bottom:calc(80px + env(safe-area-inset-bottom));
+
+}
