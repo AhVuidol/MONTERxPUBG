@@ -33,7 +33,7 @@ header{
 
     gap:16px;
 
-    padding:22px;
+    padding:18px 22px;
 
     background:rgba(255,255,255,.92);
 
@@ -45,10 +45,10 @@ header{
 
 .logo{
 
-width:62px;
-height:62px;
-
-border-radius:18px;
+width:56px;
+height:56px;
+border-radius:16px;
+font-size:24px;
 
 background:#111;
 
@@ -72,8 +72,7 @@ box-shadow:
 
 header h1{
 
-font-size:32px;
-
+font-size:27px;
 font-weight:800;
 
 letter-spacing:-.5px;
@@ -82,11 +81,9 @@ letter-spacing:-.5px;
 
 header p{
 
-margin-top:4px;
-
-font-size:16px;
-
-color:#8a8a8a;
+font-size:14px;
+margin-top:2px;
+color:#8c8c8c;
 
 font-weight:500;
 
@@ -110,12 +107,12 @@ z-index:90;
 
 .search input{
     width:100%;
-    height:54px;
+    height:46px;
     border:none;
     outline:none;
-    border-radius:16px;
+    border-radius:14px;
     background:#fff;
-    padding:0 18px;
+    padding:0 16px;
     font-size:16px;
     box-shadow:0 4px 12px rgba(0,0,0,.06);
 }
@@ -138,7 +135,7 @@ justify-content:space-between;
 
 align-items:center;
 
-background:#EEF1FF;
+background:#F4F5FF;
 
 border-radius:16px 16px 0 0;
 
@@ -183,9 +180,8 @@ align-items:center;
 
 gap:14px;
 
-padding:16px 18px;
-
-min-height:82px;
+padding:14px 18px;
+min-height:74px;
 
 background:#fff;
 
@@ -205,11 +201,9 @@ background:#fafafa;
 
 .item img{
 
-width:56px;
-
-height:56px;
-
-border-radius:14px;
+width:52px;
+height:52px;
+border-radius:12px;
 
 object-fit:cover;
 
@@ -229,8 +223,7 @@ min-width:0;
 
 .item-text h3{
 
-font-size:18px;
-
+font-size:16px;
 font-weight:700;
 
 margin-bottom:4px;
@@ -244,16 +237,16 @@ text-overflow:ellipsis;
 }
 
 .item-text p{
-    margin-top:4px;
+    margin-top:2px;
     color:#888;
-    font-size:14px;
+    font-size:13px;
 }
 
 .arrow{
 
-width:28px;
+width:24px;
 
-height:28px;
+height:24px;
 
 border-radius:50%;
 
@@ -267,7 +260,7 @@ font-size:18px;
 
 background:transparent;
 
-color:#b5b5b5;
+color:#c2c2c2;
 
 }
 
