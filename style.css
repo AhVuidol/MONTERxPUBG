@@ -554,3 +554,64 @@ RESPONSIVE
 }
 
 }
+/* LOADER */
+
+#loader{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:#f2f2f7;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:99999;
+
+}
+
+.loader-box{
+
+text-align:center;
+
+}
+
+.loader-circle{
+
+width:55px;
+
+height:55px;
+
+border:5px solid #ddd;
+
+border-top:5px solid #007AFF;
+
+border-radius:50%;
+
+animation:spin 1s linear infinite;
+
+margin:auto;
+
+margin-bottom:15px;
+
+}
+
+@keyframes spin{
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
