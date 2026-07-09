@@ -615,3 +615,100 @@ transform:rotate(360deg);
 }
 
 }
+/* ===========================
+   APP STORE HEADER
+=========================== */
+
+.header{
+    position: sticky;
+    top:0;
+    z-index:999;
+
+    background:#101010;
+
+    padding:18px;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+}
+
+.logo-box{
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:15px;
+}
+
+.logo{
+    width:62px;
+
+    height:62px;
+
+    border-radius:18px;
+
+    object-fit:cover;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.35);
+}
+
+.logo-text h1{
+
+    font-size:24px;
+
+    color:#fff;
+
+    margin:0;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+}
+
+.logo-text span{
+
+    color:#8f8f8f;
+
+    font-size:14px;
+}
+
+.search-box{
+
+    width:100%;
+}
+
+.search-box input{
+
+    width:100%;
+
+    padding:14px 18px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:16px;
+
+    background:#1d1d1d;
+
+    color:#fff;
+
+    font-size:16px;
+
+    transition:.25s;
+}
+
+.search-box input:focus{
+
+    background:#262626;
+
+    box-shadow:0 0 0 2px #0A84FF;
+}
+
+.search-box input::placeholder{
+
+    color:#9f9f9f;
+}
