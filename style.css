@@ -965,3 +965,30 @@ background-position:600%;
 }
 
 }
+@keyframes logoGlow{
+
+0%{
+
+text-shadow:
+0 0 5px #00aaff,
+0 0 15px #00aaff;
+
+}
+
+50%{
+
+text-shadow:
+0 0 8px #00ff99,
+0 0 20px #00ff99;
+
+}
+
+100%{
+
+text-shadow:
+0 0 10px #ff0080,
+0 0 30px #ff0080;
+
+}
+
+}
