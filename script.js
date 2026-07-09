@@ -33,9 +33,9 @@ closePopup.addEventListener("click", () => {
 
     popup.style.display = "none";
 
-    const twoHours = Date.now() + (2 * 60 * 60 * 1000);
+const twoHours = Date.now() + (2 * 60 * 60 * 1000);
 
-    localStorage.setItem("hidePopupUntil", twoHours);
+localStorage.setItem("hidePopupUntil", twoHours);
 
 });
 
@@ -136,7 +136,13 @@ window.addEventListener("scroll",()=>{
     document.getElementById("scrollBar").style.width=scrolled+"%";
 
 });
-const music=document.getElementById("bgMusic");
+const bgmusic = document.getElementById("bgmusic");
+const joinDiscord = document.getElementById("joinDiscord");
+if (joinDiscord) {
+    joinDiscord.addEventListener("click", () => {
+        playMusic();
+    });
+}
 
 if(music){
 
