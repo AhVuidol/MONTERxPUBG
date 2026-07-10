@@ -478,7 +478,8 @@ img{
 ===================================================== */
 
 .game-card{
-
+   
+    overflow:visible;
     background:#16161d;
 
     border-radius:28px;
@@ -881,5 +882,72 @@ background-position:0%;
 background-position:300%;
 
 }
+
+}
+/* =========================================
+   GAME CARD VIỀN 7 MÀU
+========================================= */
+
+.game-card{
+    position:relative;
+    z-index:1;
+}
+
+.game-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-2px;
+
+    border-radius:30px;
+
+    background:linear-gradient(
+        90deg,
+        #ff2d95,
+        #8b5cff,
+        #00d5ff,
+        #4cff4c,
+        #ffe600,
+        #ff7b00,
+        #ff2d95
+    );
+
+    background-size:400% 400%;
+
+    animation:borderFlow 8s linear infinite;
+
+    z-index:-1;
+
+    opacity:.9;
+
+}
+
+.game-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:2px;
+
+    background:#16161d;
+
+    border-radius:28px;
+
+    z-index:-1;
+
+}
+
+@keyframes borderFlow{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    100%{
+        background-position:400% 50%;
+    }
 
 }
