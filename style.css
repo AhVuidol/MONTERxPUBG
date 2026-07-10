@@ -600,15 +600,19 @@ body{
 }
 
 .rgb-border{
-    position:fixed;
-    inset:0;
-    padding:3px;
-    border-radius:30px;
-    pointer-events:none;
-    z-index:9999;
+    position: fixed;
+    inset: 0;
+    border-radius: 28px;
+    pointer-events: none;
+    z-index: 9999;
+    overflow: hidden;
+}
 
-    background:linear-gradient(
-        90deg,
+.rgb-border::before{
+    content: "";
+    position: absolute;
+    inset: -200%;
+    background: conic-gradient(
         red,
         orange,
         yellow,
@@ -618,21 +622,20 @@ body{
         violet,
         red
     );
-    background-size:300% 300%;
-    animation:rgb 4s linear infinite;
 
-    -webkit-mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-    -webkit-mask-composite:xor;
-            mask-composite:exclude;
+    animation: spin 3s linear infinite;
 }
 
-@keyframes rgb{
-    from{
-        background-position:0% 50%;
-    }
+.rgb-border::after{
+    content: "";
+    position: absolute;
+    inset: 3px;   /* độ dày viền */
+    background: #0b0b0b;
+    border-radius: 25px;
+}
+
+@keyframes spin{
     to{
-        background-position:300% 50%;
+        transform: rotate(360deg);
     }
 }
