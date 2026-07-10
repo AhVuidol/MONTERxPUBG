@@ -592,81 +592,47 @@ box-shadow:
 /*==============================
 MENU ACTIVE
 ==============================*/
-/* ===== RGB Border Animation ===== */
+/* Viền 7 màu */
+
 body{
-    background:#000;
-    position:relative;
-    overflow-x:hidden;
+    margin:0;
+    background:#0b0b0b;
 }
 
-/* Viền 7 màu */
-body::before{
-    content:"";
+.rgb-border{
     position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
+    inset:0;
     padding:3px;
+    border-radius:30px;
     pointer-events:none;
     z-index:9999;
 
     background:linear-gradient(
         90deg,
-        #ff0000,
-        #ff7b00,
-        #ffee00,
-        #00ff00,
-        #00ffff,
-        #004cff,
-        #cc00ff,
-        #ff0000
+        red,
+        orange,
+        yellow,
+        lime,
+        cyan,
+        blue,
+        violet,
+        red
     );
-
-    background-size:400% 400%;
+    background-size:300% 300%;
+    animation:rgb 4s linear infinite;
 
     -webkit-mask:
         linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
-
     -webkit-mask-composite:xor;
             mask-composite:exclude;
-
-    animation:rgbBorder 5s linear infinite;
 }
 
-/* Ánh sáng ngoài */
-body::after{
-    content:"";
-    position:fixed;
-    inset:-5px;
-    pointer-events:none;
-    z-index:9998;
-
-    background:linear-gradient(
-        90deg,
-        #ff0000,
-        #ff7b00,
-        #ffee00,
-        #00ff00,
-        #00ffff,
-        #004cff,
-        #cc00ff,
-        #ff0000
-    );
-
-    background-size:400% 400%;
-    filter:blur(12px);
-    opacity:.35;
-
-    animation:rgbBorder 5s linear infinite;
-}
-
-@keyframes rgbBorder{
-    0%{
+@keyframes rgb{
+    from{
         background-position:0% 50%;
     }
-    100%{
-        background-position:400% 50%;
+    to{
+        background-position:300% 50%;
     }
 }
