@@ -619,3 +619,11 @@ transform:translateY(0);
 }
 
 }
+/* Thu nhỏ tiêu đề riêng cho LQM, FF, Game Khác */
+
+#lqm .game-card-body h3,
+#ff .game-card-body h3,
+#other .game-card-body h3{
+    font-size:15px;
+    line-height:1.25;
+}
