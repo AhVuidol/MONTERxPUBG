@@ -788,11 +788,13 @@ BUTTONS
 }
 
 .footer-logo{
-  width:56px;
-  height:56px;
-  margin:0 auto 14px;
-  border-radius:16px;
-  overflow:hidden;
+
+    border-radius:50%;
+
+    box-shadow:
+    0 0 18px rgba(255,160,0,.35),
+    0 0 40px rgba(255,120,0,.18);
+
 }
 
 .footer-logo img{
@@ -802,9 +804,25 @@ BUTTONS
 }
 
 .footer h2{
-  font-family:var(--font-display);
-  font-size:18px;
-  font-weight:700;
+
+    background:linear-gradient(
+        90deg,
+        #ff43c6,
+        #8b5cff,
+        #00d4ff,
+        #55ff55,
+        #ffe600,
+        #ff7a00
+    );
+
+    background-size:300%;
+
+    animation:footerRainbow 6s linear infinite;
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
 }
 
 .footer > p{
@@ -838,6 +856,21 @@ BUTTONS
 .copyright{
   color:#57575e;
   font-size:12px;
+}
+
+.footer-links a{
+
+    transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 0 18px rgba(139,92,246,.28);
+
 }
 
 /* =====================================================
