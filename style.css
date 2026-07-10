@@ -407,24 +407,19 @@ img{
 ===================================================== */
 
 .buttons{
-  display:flex;
-  gap:10px;
-  margin-top:16px;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:10px;
+    margin-top:16px;
 }
 
 .buttons a{
-  flex:1;
-  height:50px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:var(--radius-sm);
-  font-size:15px;
-  font-weight:700;
-  line-height:1;
-  white-space:nowrap;
-  text-align:center;
-  transition:transform .12s ease, opacity .15s ease;
+    height:50px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    border-radius:10px;
 }
 
 .buttons a:active{
