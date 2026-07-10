@@ -215,38 +215,48 @@ img{
 ===================================================== */
 
 .header{
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    position:sticky;
+    top:0;
+    z-index:1000;
 
     display:flex;
     align-items:center;
-    gap:14px;
+    gap:16px;
 
-    padding:18px;
+    padding:18px 20px;
 
-    background:rgba(15,15,18,.72);
-    backdrop-filter:blur(20px);
-    -webkit-backdrop-filter:blur(20px);
+    background:rgba(18,18,22,.78);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
 
     border-bottom:1px solid rgba(255,255,255,.08);
 
-    box-shadow:0 8px 25px rgba(0,0,0,.25);
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.35);
 }
 
 .header .logo{
     flex:0 0 auto;
-    width:58px;
-    height:58px;
+
+    width:60px;
+    height:60px;
+
     border-radius:18px;
+
     overflow:hidden;
+
+    background:#111;
 
     box-shadow:
         0 0 0 1px rgba(255,255,255,.08),
-        0 8px 20px rgba(0,0,0,.35),
-        0 0 18px rgba(255,145,0,.25);
+        0 10px 30px rgba(0,0,0,.45),
+        0 0 18px rgba(255,140,0,.35);
 
-    transition:.3s;
+    transition:.25s;
+}
+
+.header .logo:active{
+    transform:scale(.95);
 }
 
 .header .logo:active{
@@ -261,16 +271,27 @@ img{
 }
 
 .header-text h1{
-  font-family:var(--font-display);
-  font-size:22px;
-  font-weight:800;
-  letter-spacing:.2px;
+    font-family:var(--font-display);
+
+    font-size:34px;
+
+    font-weight:800;
+
+    letter-spacing:.3px;
+
+    color:white;
+
+    line-height:1;
 }
 
 .header-text p{
-  font-size:13px;
-  color:var(--text-dim);
-  margin-top:3px;
+
+    margin-top:6px;
+
+    color:#9f9fa8;
+
+    font-size:15px;
+
 }
 
 /* =====================================================
@@ -391,18 +412,35 @@ img{
 ===================================================== */
 
 .game-card{
-    background:#141418;
-    border:1px solid rgba(255,255,255,.06);
-    border-radius:26px;
+
+    background:linear-gradient(
+        180deg,
+        #18181d,
+        #111114
+    );
+
+    border-radius:28px;
+
     overflow:hidden;
 
-    margin-bottom:22px;
+    margin-bottom:24px;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    box-shadow:
+        0 12px 25px rgba(0,0,0,.45);
 
     transition:.25s;
 
+}
+
+.game-card:active{
+
+    transform:scale(.985);
+
     box-shadow:
-        0 8px 20px rgba(0,0,0,.35),
-        0 0 0 rgba(139,92,246,0);
+        0 18px 35px rgba(139,92,246,.25);
+
 }
 
 .game-card:active{
@@ -461,9 +499,9 @@ img{
 
 .buttons a{
 
-    height:52px;
+    height:56px;
 
-    border-radius:16px;
+    border-radius:18px;
 
     display:flex;
 
@@ -471,13 +509,23 @@ img{
 
     align-items:center;
 
+    text-align:center;
+
+    font-size:16px;
+
     font-weight:700;
 
     transition:.2s;
 
     box-shadow:
-    inset 0 1px rgba(255,255,255,.15),
-    0 8px 18px rgba(0,0,0,.2);
+        inset 0 1px rgba(255,255,255,.15),
+        0 8px 18px rgba(0,0,0,.25);
+
+}
+
+.buttons a:active{
+
+    transform:scale(.94);
 
 }
 
@@ -492,23 +540,27 @@ img{
   opacity:.85;
 }
 
-.buttons .install{
+.buttons a.install{
 
-background:linear-gradient(
-180deg,
-#3fa8ff,
-#007aff);
+    background:linear-gradient(
+        180deg,
+        #39a7ff,
+        #007aff
+    );
+
+    color:white;
 
 }
 
-.buttons .key{
+.buttons a.key{
 
-background:linear-gradient(
-180deg,
-#ffffff,
-#ececec);
+    background:linear-gradient(
+        180deg,
+        #ffffff,
+        #ececec
+    );
 
-color:#111;
+    color:#111;
 
 }
 
