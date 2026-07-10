@@ -431,12 +431,34 @@ img{
 
 .games h2,
 .category h2{
-  position:relative;
-  font-family:var(--font-display);
-  font-size:19px;
-  font-weight:700;
-  margin-bottom:18px;
-  padding-left:14px;
+
+    position:relative;
+
+    font-family:var(--font-display);
+
+    font-size:24px;
+
+    font-weight:900;
+
+    margin-bottom:20px;
+
+    padding-left:14px;
+
+    background:linear-gradient(
+        90deg,
+        #ff2fd6 0%,
+        #9d4dff 16%,
+        #3f7cff 32%,
+        #00d4ff 48%,
+        #00ff8c 64%,
+        #ffe600 82%,
+        #ff9800 100%
+    );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+
 }
 
 .games h2::before,
