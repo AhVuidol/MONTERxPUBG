@@ -273,7 +273,7 @@ img{
 .header-text h1{
     font-family:var(--font-display);
 
-    font-size:34px;
+    font-size:28px;
 
     font-weight:800;
 
@@ -412,31 +412,51 @@ img{
 ===================================================== */
 
 .game-card{
+
+    background:#16161d;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    margin-bottom:24px;
+
+    position:relative;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    box-shadow:
+        0 12px 25px rgba(0,0,0,.45);
+
+    transition:.25s;
+
+}
 .game-card::before{
 
-content:"";
+    content:"";
 
-position:absolute;
+    position:absolute;
 
-left:0;
-right:0;
-top:0;
+    left:0;
+    right:0;
+    top:0;
 
-height:1px;
+    height:1px;
 
-background:linear-gradient(
-90deg,
-transparent,
-rgba(255,255,255,.45),
-transparent);
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.45),
+        transparent
+    );
 
 }
     margin-top:28px;
     background:linear-gradient(
-        180deg,
-        #18181d,
-        #111114
-    );
+180deg,
+#4da3ff,
+#0a84ff
+);
 
     border-radius:28px;
 
@@ -734,4 +754,29 @@ box-shadow:
 0 0 20px rgba(139,92,246,.18);
 
 }
+.game-card{
 
+    position:relative;
+
+}
+
+.game-card::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+right:0;
+top:0;
+
+height:120px;
+
+background:linear-gradient(
+180deg,
+rgba(255,255,255,.06),
+transparent);
+
+pointer-events:none;
+
+}
