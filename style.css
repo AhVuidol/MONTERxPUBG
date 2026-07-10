@@ -217,7 +217,7 @@ img{
 .header{
     position:sticky;
     top:0;
-    z-index:1000;
+    z-index:999;
 
     display:flex;
     align-items:center;
@@ -225,34 +225,50 @@ img{
 
     padding:18px 20px;
 
-    background:rgba(18,18,22,.78);
+    background:rgba(15,15,20,.78);
+
     backdrop-filter:blur(18px);
     -webkit-backdrop-filter:blur(18px);
 
-    border-bottom:1px solid rgba(255,255,255,.08);
+    border-bottom:1px solid rgba(255,255,255,.06);
 
     box-shadow:
-        0 10px 25px rgba(0,0,0,.35);
+        0 10px 30px rgba(0,0,0,.35);
+
+    transition:.3s;
 }
 
 .header .logo{
-    flex:0 0 auto;
 
-    width:60px;
-    height:60px;
+    width:62px;
+    height:62px;
+
+    flex:0 0 auto;
 
     border-radius:18px;
 
     overflow:hidden;
 
-    background:#111;
+    border:1px solid rgba(255,255,255,.08);
+
+    background:#141418;
 
     box-shadow:
-        0 0 0 1px rgba(255,255,255,.08),
-        0 10px 30px rgba(0,0,0,.45),
-        0 0 18px rgba(255,140,0,.35);
+
+        0 0 0 1px rgba(255,255,255,.05),
+
+        0 12px 30px rgba(0,0,0,.45),
+
+        0 0 25px rgba(255,160,0,.20);
 
     transition:.25s;
+
+}
+
+.header .logo:active{
+
+    transform:scale(.95);
+
 }
 
 .header .logo:active{
@@ -264,33 +280,61 @@ img{
 }
 
 .header .logo img.logo{
-  width:100%;
-  height:100%;
-  border-radius:16px;
-  object-fit:cover;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.4s;
+
+}
+
+.header .logo:hover img{
+
+    transform:scale(1.08);
+
 }
 
 .header-text h1{
+
     font-family:var(--font-display);
 
-    font-size:28px;
+    font-size:27px;
 
-    font-weight:800;
+    font-weight:900;
 
-    letter-spacing:.3px;
+    letter-spacing:.4px;
 
-    color:white;
+    background:linear-gradient(
+        90deg,
+        #ff4de1,
+        #8b5cf6,
+        #00d4ff,
+        #00ff99,
+        #ffe600,
+        #ff9900
+    );
 
-    line-height:1;
+    background-size:300%;
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    animation:logoGradient 8s linear infinite;
+
 }
 
 .header-text p{
 
-    margin-top:6px;
+    margin-top:5px;
 
-    color:#9f9fa8;
+    color:#9fdcff;
 
-    font-size:15px;
+    font-size:14px;
+
+    font-weight:600;
 
 }
 
@@ -743,40 +787,18 @@ box-shadow:
 /*==============================
 MENU ACTIVE
 ==============================*/
-.game-card:hover{
+@keyframes logoGradient{
 
-transform:translateY(-4px);
+0%{
 
-box-shadow:
-
-0 18px 40px rgba(0,0,0,.45),
-
-0 0 20px rgba(139,92,246,.18);
-
-}
-.game-card{
-
-    position:relative;
+background-position:0%;
 
 }
 
-.game-card::after{
+100%{
 
-content:"";
+background-position:300%;
 
-position:absolute;
-
-left:0;
-right:0;
-top:0;
-
-height:120px;
-
-background:linear-gradient(
-180deg,
-rgba(255,255,255,.06),
-transparent);
-
-pointer-events:none;
+}
 
 }
