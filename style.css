@@ -412,7 +412,26 @@ img{
 ===================================================== */
 
 .game-card{
+.game-card::before{
 
+content:"";
+
+position:absolute;
+
+left:0;
+right:0;
+top:0;
+
+height:1px;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.45),
+transparent);
+
+}
+    margin-top:28px;
     background:linear-gradient(
         180deg,
         #18181d,
@@ -453,15 +472,13 @@ img{
 }
 
 .game-card img{
-
     width:100%;
-
     aspect-ratio:16/9;
-
     object-fit:cover;
 
-    transition:.4s;
+    border-bottom:1px solid rgba(255,255,255,.05);
 
+    transition:.4s;
 }
 
 .game-card:hover img{
@@ -706,5 +723,15 @@ box-shadow:
 /*==============================
 MENU ACTIVE
 ==============================*/
-/* Viền 7 màu */
+.game-card:hover{
+
+transform:translateY(-4px);
+
+box-shadow:
+
+0 18px 40px rgba(0,0,0,.45),
+
+0 0 20px rgba(139,92,246,.18);
+
+}
 
