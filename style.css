@@ -593,63 +593,86 @@ img{
    BUTTONS — Cài đặt / Nhận Key
 ===================================================== */
 
+/*====================================================
+BUTTONS
+====================================================*/
+
 .buttons{
     display:grid;
-    grid-template-columns:1fr 1fr 1fr;
-    gap:10px;
-    margin-top:16px;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    margin-top:18px;
 }
 
 .buttons a{
-
-    .buttons a{
-
-    position:relative;
-
-    overflow:hidden;
-
     display:flex;
     justify-content:center;
     align-items:center;
 
-    height:56px;
+    min-height:58px;
+    padding:12px 10px;
+
+    text-align:center;
+    text-decoration:none;
+
+    font-size:17px;
+    font-weight:800;
+    line-height:1.2;
 
     border-radius:18px;
 
-    font-size:18px;
+    transition:.25s;
 
-    font-weight:800;
+    position:relative;
+    overflow:hidden;
 
-    text-decoration:none;
-
-    transition:
-        transform .18s ease,
-        box-shadow .25s ease,
-        filter .25s ease;
-
-    border:1px solid rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
 
     backdrop-filter:blur(8px);
     -webkit-backdrop-filter:blur(8px);
+}
 
+/* ánh sáng chạy */
+
+.buttons a::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-120%;
+
+    width:60%;
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.55),
+        transparent
+    );
+
+    transform:skewX(-25deg);
+
+    transition:.8s;
+
+}
+
+.buttons a:hover::before{
+    left:160%;
+}
+
+.buttons a:hover{
+    transform:translateY(-3px);
+    filter:brightness(1.08);
 }
 
 .buttons a:active{
-
-    transform:scale(.94);
-
+    transform:scale(.95);
 }
 
-.buttons a:active{
-
-    transform:scale(.94);
-
-}
-
-.buttons a:active{
-  transform:scale(.97);
-  opacity:.85;
-}
+/* LINK TRỰC TIẾP */
 
 .buttons .install{
 
@@ -657,33 +680,49 @@ img{
 
     background:linear-gradient(
         180deg,
-        #49b7ff,
-        #0a84ff
+        #32b8ff,
+        #007dff
     );
 
     box-shadow:
-
-        0 0 15px rgba(10,132,255,.45),
-
+        0 0 18px rgba(0,145,255,.45),
         inset 0 1px rgba(255,255,255,.25);
 
 }
 
+/* NHẬN KEY */
+
 .buttons .key{
 
-    color:#1b1b1b;
+    color:#2b1d00;
 
     background:linear-gradient(
         180deg,
-        #ffe873,
+        #ffe76b,
         #ffb300
     );
 
     box-shadow:
-
-        0 0 16px rgba(255,196,0,.45),
-
+        0 0 18px rgba(255,190,0,.45),
         inset 0 1px rgba(255,255,255,.35);
+
+}
+
+/* CÀI ĐẶT IPA */
+
+.buttons .ipa{
+
+    color:#fff;
+
+    background:linear-gradient(
+        180deg,
+        #ff5cff,
+        #a300ff
+    );
+
+    box-shadow:
+        0 0 18px rgba(220,0,255,.45),
+        inset 0 1px rgba(255,255,255,.25);
 
 }
    
@@ -842,32 +881,5 @@ background-position:0%;
 background-position:300%;
 
 }
-
-}
-/* ================= IPA BUTTON ================= */
-
-.buttons .ipa{
-    color:#fff;
-    background:linear-gradient(
-        180deg,
-        #ff58ff,
-        #b400ff
-    );
-
-    box-shadow:
-        0 0 18px rgba(200,0,255,.45),
-        inset 0 1px rgba(255,255,255,.25);
-}
-   .buttons a{
-
-    transition:all .25s ease;
-
-}
-
-.buttons a:active{
-
-    transform:scale(.96);
-
-    filter:brightness(1.15);
 
 }
