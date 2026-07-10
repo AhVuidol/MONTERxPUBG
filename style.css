@@ -999,3 +999,30 @@ background-position:300%;
     }
 
 }
+.footer-slogan{
+
+    margin:14px 0 22px;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    background:linear-gradient(
+        90deg,
+        #ff4dc4,
+        #8b5cff,
+        #00d4ff,
+        #55ff55,
+        #ffe600,
+        #ff7a00
+    );
+
+    background-size:300%;
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    animation:footerRainbow 6s linear infinite;
+
+}
