@@ -844,3 +844,30 @@ background-position:300%;
 }
 
 }
+/* ================= IPA BUTTON ================= */
+
+.buttons .ipa{
+    color:#fff;
+    background:linear-gradient(
+        180deg,
+        #ff58ff,
+        #b400ff
+    );
+
+    box-shadow:
+        0 0 18px rgba(200,0,255,.45),
+        inset 0 1px rgba(255,255,255,.25);
+}
+   .buttons a{
+
+    transition:all .25s ease;
+
+}
+
+.buttons a:active{
+
+    transform:scale(.96);
+
+    filter:brightness(1.15);
+
+}
