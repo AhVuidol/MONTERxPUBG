@@ -419,7 +419,17 @@ img{
     justify-content:center;
     align-items:center;
     text-align:center;
+
     border-radius:10px;
+
+    font-size:15px;
+    font-weight:700;
+    line-height:1.2;
+
+    white-space:normal;
+    word-break:keep-all;
+
+    padding:0 8px;
 }
 
 .buttons a:active{
