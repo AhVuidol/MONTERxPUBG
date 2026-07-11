@@ -95,3 +95,83 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+/* ========= DOWNLOAD POPUP ========= */
+
+const downloadPopup = document.getElementById("downloadPopup");
+const continueDownload = document.getElementById("continueDownload");
+const cancelDownload = document.getElementById("cancelDownload");
+const downloadTitle = document.querySelector(".download-version");
+const downloadMessage = document.getElementById("downloadMessage");
+
+let currentLink = "";
+
+document.querySelectorAll(".install,.key,.ipa").forEach(btn=>{
+
+    btn.addEventListener("click",function(e){
+
+        e.preventDefault();
+
+        currentLink = this.href;
+
+        if(this.classList.contains("install")){
+
+            downloadTitle.innerHTML="LINK TRỰC TIẾP";
+
+            downloadMessage.innerHTML=`
+            Nếu Link Trực Tiếp Cài Lỗi<br><br>
+            Hãy Cài Link iPA
+            `;
+
+        }
+
+        if(this.classList.contains("key")){
+
+            downloadTitle.innerHTML="LẤY KEY";
+
+            downloadMessage.innerHTML=`
+            Key Free 24h<br><br>
+            Hết Key Cứ Quay Lại Web Lấy
+            `;
+
+        }
+
+        if(this.classList.contains("ipa")){
+
+            downloadTitle.innerHTML="LINK IPA";
+
+            downloadMessage.innerHTML=`
+            Cài Đúng iPA<br><br>
+            Và Lấy Đúng Key Của Game
+            `;
+
+        }
+
+        downloadPopup.style.display="flex";
+
+    });
+
+});
+
+continueDownload.onclick=()=>{
+
+    window.open(currentLink,"_blank");
+
+    downloadPopup.style.display="none";
+
+}
+
+cancelDownload.onclick=()=>{
+
+    downloadPopup.style.display="none";
+
+}
+
+downloadPopup.onclick=(e)=>{
+
+    if(e.target===downloadPopup){
+
+        downloadPopup.style.display="none";
+
+    }
+
+}
