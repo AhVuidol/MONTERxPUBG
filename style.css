@@ -1695,3 +1695,63 @@ left:180%;
 }
 
 }
+.download-popup{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+    backdrop-filter:blur(8px);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+}
+
+.download-box{
+    width:90%;
+    max-width:380px;
+    background:#18181d;
+    border-radius:22px;
+    padding:24px;
+    border:2px solid #7c5cff;
+    text-align:center;
+    animation:popupShow .3s;
+}
+
+.download-box h2{
+    color:#fff;
+    margin-bottom:12px;
+}
+
+.download-version{
+    color:#00ff88;
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+#downloadMessage{
+    color:#ddd;
+    line-height:28px;
+    margin-bottom:20px;
+}
+
+#continueDownload{
+    display:block;
+    width:100%;
+    padding:14px;
+    border-radius:14px;
+    text-decoration:none;
+    background:#2d8cff;
+    color:#fff;
+    font-weight:700;
+    margin-bottom:12px;
+}
+
+#cancelDownload{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:14px;
+    background:#444;
+    color:#fff;
+    font-weight:700;
+}
