@@ -105,7 +105,7 @@ const downloadMessage = document.getElementById("downloadMessage");
 
 let currentLink = "";
 
-document.querySelectorAll(".install,.key,.ipa").forEach(btn=>{
+document.querySelectorAll(".install,.key,.ipa,.apk64,.apk32,.tipa").forEach(btn=>{
 
     btn.addEventListener("click",function(e){
 
