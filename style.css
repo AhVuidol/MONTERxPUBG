@@ -1146,3 +1146,30 @@ background-position:300%;
 .status::before{
     animation:statusPulse 1.5s infinite ease-in-out;
 }
+.popup-text{
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    text-align:center;
+
+    margin-top:18px;
+
+}
+
+.popup-text2{
+
+    font-size:15px;
+
+    color:#bfbfbf;
+
+    line-height:28px;
+
+    text-align:center;
+
+    margin-top:12px;
+
+}
