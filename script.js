@@ -145,7 +145,39 @@ document.querySelectorAll(".install,.key,.ipa").forEach(btn=>{
             `;
 
         }
+if(this.classList.contains("apk64")){
 
+    downloadTitle.innerHTML="APK 64BIT";
+
+    downloadMessage.innerHTML=`
+    Nếu Máy Không Hỗ Trợ 64Bit<br><br>
+    Hãy Tải Thử 32Bit.
+    `;
+
+}
+
+if(this.classList.contains("apk32")){
+
+    downloadTitle.innerHTML="APK 32BIT";
+
+    downloadMessage.innerHTML=`
+    Nếu Máy Hỗ Trợ 64Bit<br><br>
+    Khuyên Dùng Apk 64Bit<br><br>
+    Nếu Chơi 32Bit Có Thể Bị Giật Lag
+    `;
+
+}
+
+if(this.classList.contains("tipa")){
+
+    downloadTitle.innerHTML="TIPA";
+
+    downloadMessage.innerHTML=`
+    Sau Khi Tải Xong<br><br>
+    Hãy Cài Đặt Bằng TrollStore
+    `;
+
+}
         downloadPopup.style.display="flex";
 
     });
