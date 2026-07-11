@@ -1247,13 +1247,30 @@ background-position:300%;
 
     font-size:20px;
 
-    font-weight:700;
-
-    color:#ffffff;
+    font-weight:800;
 
     text-align:center;
 
-    margin-top:18px;
+    line-height:32px;
+
+    margin:18px auto 8px;
+
+    background:linear-gradient(
+        90deg,
+        #8b5cff,
+        #00bfff,
+        #00ff99,
+        #ffd500,
+        #8b5cff
+    );
+
+    background-size:300%;
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    animation:popupTextGlow 5s linear infinite;
 
 }
 
@@ -1261,13 +1278,13 @@ background-position:300%;
 
     font-size:15px;
 
-    color:#bfbfbf;
-
-    line-height:28px;
+    color:#cfcfcf;
 
     text-align:center;
 
-    margin-top:12px;
+    line-height:28px;
+
+    margin:10px auto 22px;
 
 }
 @keyframes popupShow{
@@ -1322,6 +1339,21 @@ filter:brightness(1.25);
 
 }
 @keyframes textGlow{
+
+0%{
+
+background-position:0%;
+
+}
+
+100%{
+
+background-position:300%;
+
+}
+
+}
+@keyframes popupTextGlow{
 
 0%{
 
