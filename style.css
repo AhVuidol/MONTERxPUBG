@@ -1529,6 +1529,17 @@ opacity:1;
     letter-spacing:1px;
 }
 
+.vip-title::after{
+    content:"  ➜";
+    animation:moveArrow 1s infinite;
+}
+
+@keyframes moveArrow{
+    0%{margin-left:0;}
+    50%{margin-left:10px;}
+    100%{margin-left:0;}
+}
+
 .vip-text{
     display:block;
     margin-top:8px;
@@ -1547,4 +1558,46 @@ opacity:1;
     100%{
         box-shadow:0 0 20px #7b2cff;
     }
+}
+.vip-status{
+    margin-top:12px;
+    display:inline-block;
+    padding:8px 18px;
+    border-radius:999px;
+
+    background:#18c964;
+
+    color:#fff;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    box-shadow:0 0 15px rgba(24,201,100,.6);
+
+    animation:pulse 1.8s infinite;
+}
+
+.vip-status.wait{
+
+    background:#f5a524;
+
+    box-shadow:0 0 15px rgba(245,165,36,.6);
+
+}
+
+@keyframes pulse{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.08);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
 }
