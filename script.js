@@ -105,7 +105,7 @@ const downloadMessage = document.getElementById("downloadMessage");
 
 let currentLink = "";
 
-document.querySelectorAll(".install,.key,.ipa,.apk64,.apk32,.tipa").forEach(btn=>{
+document.querySelectorAll(".install,.key,.ipa,.apk64,.apk32,.tipa,.allgame").forEach(btn=>{
 
     btn.addEventListener("click",function(e){
 
@@ -178,6 +178,16 @@ if(this.classList.contains("tipa")){
     `;
 
 }
+if(this.classList.contains("allgame")){
+
+            downloadTitle.innerHTML="LINK TẢI ALL GAME";
+
+            downloadMessage.innerHTML=`
+            Tải Game Nào<br><br>
+            Lấy Đúng Key Game Đó Nhé
+            `;
+
+        }
         downloadPopup.style.display="flex";
 
     });
