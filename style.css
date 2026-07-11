@@ -1497,63 +1497,54 @@ opacity:1;
 =========================== */
 
 .vip-banner{
+    width:92%;
+    margin:18px auto 28px;
+    padding:18px;
+    text-align:center;
 
-margin:22px auto 28px;
+    background:linear-gradient(135deg,#7b2cff,#00c6ff);
 
-width:92%;
+    border-radius:20px;
 
-padding:18px;
+    box-shadow:
+    0 0 25px rgba(0,195,255,.35);
 
-border-radius:20px;
+    cursor:pointer;
 
-background:linear-gradient(
-135deg,
-#8b5cff,
-#1fb6ff
-);
+    transition:.3s;
 
-text-align:center;
-
-box-shadow:
-0 0 25px rgba(96,76,255,.45);
-
-cursor:pointer;
-
-transition:.25s;
-
+    animation:vipGlow 3s linear infinite;
 }
 
 .vip-banner:hover{
-
-transform:translateY(-4px);
-
-box-shadow:
-0 0 35px rgba(96,76,255,.65);
-
+    transform:translateY(-4px) scale(1.02);
+    box-shadow:0 0 40px rgba(0,195,255,.6);
 }
 
 .vip-title{
-
-display:block;
-
-font-size:24px;
-
-font-weight:800;
-
-color:#fff;
-
+    display:block;
+    font-size:26px;
+    font-weight:800;
+    color:#fff;
+    letter-spacing:1px;
 }
 
 .vip-text{
+    display:block;
+    margin-top:8px;
+    color:#fff8b0;
+    font-size:15px;
+    font-weight:600;
+}
 
-display:block;
-
-margin-top:8px;
-
-font-size:15px;
-
-color:#f5f5f5;
-
-opacity:.95;
-
+@keyframes vipGlow{
+    0%{
+        box-shadow:0 0 20px #7b2cff;
+    }
+    50%{
+        box-shadow:0 0 35px #00c6ff;
+    }
+    100%{
+        box-shadow:0 0 20px #7b2cff;
+    }
 }
