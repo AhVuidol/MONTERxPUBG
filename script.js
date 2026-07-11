@@ -95,3 +95,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+const openShop = document.getElementById("openShop");
+const shopPopup = document.getElementById("shopPopup");
+const closeShop = document.getElementById("closeShop");
+
+openShop.onclick = () => {
+    shopPopup.style.display = "flex";
+};
+
+closeShop.onclick = () => {
+    shopPopup.style.display = "none";
+};
+
+shopPopup.onclick = (e) => {
+    if(e.target === shopPopup){
+        shopPopup.style.display = "none";
+    }
+};
