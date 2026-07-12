@@ -50,15 +50,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function showPopup() {
     if (!popup) return;
+
     popup.style.display = "flex";
+    popup.style.opacity = "1";
+    popup.style.visibility = "visible";
+
     document.body.classList.add("no-scroll");
-  }
+}
 
   function hidePopup() {
     if (!popup) return;
-    popup.style.display = "none";
+
+    popup.style.opacity = "0";
+    popup.style.visibility = "hidden";
+
     document.body.classList.remove("no-scroll");
-  }
+}
 
   function enterSite() {
     hidePopup();
