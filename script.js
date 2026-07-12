@@ -217,3 +217,56 @@ downloadPopup.onclick=(e)=>{
     }
 
 }
+/* ===========================
+      GALAXY 3D EFFECT
+=========================== */
+
+const galaxy = document.getElementById("galaxy");
+
+const galaxyColors = [
+"#9d4dff",
+"#00d4ff",
+"#ffffff",
+"#6f6cff",
+"#7b2fff"
+];
+
+function createGalaxyStar(){
+
+    if(!galaxy) return;
+
+    const star = document.createElement("div");
+
+    star.className="star";
+
+    const size=Math.random()*5+2;
+
+    star.style.width=size+"px";
+    star.style.height=size+"px";
+
+    star.style.left=Math.random()*100+"vw";
+
+    const color=galaxyColors[
+        Math.floor(Math.random()*galaxyColors.length)
+    ];
+
+    star.style.background=color;
+
+    star.style.boxShadow=`
+    0 0 ${size*2}px ${color},
+    0 0 ${size*6}px ${color}
+    `;
+
+    const duration=4+Math.random()*5;
+
+    star.style.animationDuration=duration+"s";
+
+    galaxy.appendChild(star);
+
+    setTimeout(()=>{
+        star.remove();
+    },duration*1000);
+
+}
+
+setInterval(createGalaxyStar,120);
