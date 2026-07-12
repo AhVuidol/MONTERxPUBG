@@ -1755,3 +1755,54 @@ left:180%;
     color:#fff;
     font-weight:700;
 }
+/* ===========================
+   GALAXY 3D
+=========================== */
+
+#galaxy{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:1;
+}
+.header,
+.games,
+footer,
+.social-top,
+.vip-banner,
+.popup{
+    position:relative;
+    z-index:2;
+}
+.star{
+    position:absolute;
+    border-radius:50%;
+    opacity:.9;
+    animation-name:starFall;
+    animation-timing-function:linear;
+    animation-fill-mode:forwards;
+    will-change:transform;
+}
+
+@keyframes starFall{
+
+    from{
+        transform:
+        translate3d(0,-100px,0)
+        scale(.4);
+        opacity:0;
+    }
+
+    10%{
+        opacity:1;
+    }
+
+    to{
+        transform:
+        translate3d(0,110vh,0)
+        scale(1.2);
+        opacity:0;
+    }
+
+}
