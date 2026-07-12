@@ -1775,10 +1775,9 @@ left:180%;
 .games,
 footer,
 .social-top,
-.vip-banner,
-.popup{
-    position:relative;
-    z-index:2;
+.vip-banner{
+    position: relative;
+    z-index: 2;
 }
 .star{
     position:absolute;
