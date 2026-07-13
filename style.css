@@ -2148,3 +2148,62 @@ body::after{
     transform:scale(.97);
 
 }
+/* ===== GAMING TITLES ===== */
+
+.games h2,
+.category h2{
+
+    position:relative;
+
+    margin:32px 0 24px;
+
+    padding-left:20px;
+
+    font-size:36px;
+
+    font-weight:900;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    background:linear-gradient(
+        90deg,
+        #ff4fd8,
+        #8c5dff,
+        #00d4ff
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    text-shadow:
+        0 0 20px rgba(180,70,255,.45);
+
+}
+
+.games h2::before,
+.category h2::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:4px;
+
+    width:6px;
+    height:42px;
+
+    border-radius:10px;
+
+    background:linear-gradient(
+        #ff4fd8,
+        #8c5dff,
+        #00d4ff
+    );
+
+    box-shadow:
+        0 0 20px #b44dff;
+
+}
