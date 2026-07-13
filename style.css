@@ -1879,3 +1879,28 @@ footer,
     }
 
 }
+#logoLoader{
+    position:fixed;
+    inset:0;
+    background:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:999999;
+}
+
+#logoLoader img{
+    width:130px;
+    animation:logoIntro 2s ease forwards;
+}
+
+@keyframes logoIntro{
+    from{
+        transform:scale(.5) rotate(0deg);
+        opacity:0;
+    }
+    to{
+        transform:scale(1) rotate(720deg);
+        opacity:1;
+    }
+}
