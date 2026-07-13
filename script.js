@@ -4,15 +4,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   /* ---------- LOADER ---------- */
   const loader = document.getElementById("loader");
-   const introVideo = document.getElementById("introVideo");
+   
   window.addEventListener("load", () => {
-     if (introVideo) {
-    introVideo.muted = false;
-
-    introVideo.play().catch(() => {
-        console.log("Intro blocked");
-    });
-}
+     
     const logoLoader = document.getElementById("logoLoader");
 
     if (loader) loader.style.display = "none";
