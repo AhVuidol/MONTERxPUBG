@@ -48,11 +48,11 @@ html{
 body{
 
     background:
-    radial-gradient(circle at top,
-    #5b18a8 0%,
-    #2b1348 30%,
-    #120b1f 65%,
-    #050407 100%);
+radial-gradient(circle at top,
+    #1a1a22 0%,
+    #111116 35%,
+    #0b0b10 70%,
+    #050507 100%);
 
     color:var(--text);
     font-family:var(--font-body);
