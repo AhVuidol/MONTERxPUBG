@@ -1882,7 +1882,7 @@ footer,
 #logoLoader{
     position:fixed;
     inset:0;
-    background:#000;
+    background:radial-gradient(circle,#1b0033 0%,#000 75%);
     display:flex;
     justify-content:center;
     align-items:center;
