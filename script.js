@@ -4,7 +4,15 @@
 document.addEventListener("DOMContentLoaded", () => {
   /* ---------- LOADER ---------- */
   const loader = document.getElementById("loader");
+   const introVideo = document.getElementById("introVideo");
   window.addEventListener("load", () => {
+     if (introVideo) {
+    introVideo.muted = false;
+
+    introVideo.play().catch(() => {
+        console.log("Intro blocked");
+    });
+}
     const logoLoader = document.getElementById("logoLoader");
 
     if (loader) loader.style.display = "none";
@@ -24,7 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const popup      = document.getElementById("popup");
   const closePopup = document.getElementById("closePopup");
   const bgmusic     = document.getElementById("bgmusic");
-
+  
+   
   const POPUP_STORAGE_KEY = "monterxpubg_popup_last_closed";
   const POPUP_COOLDOWN_MS = 2 * 60 * 60 * 1000; // 2 giờ
 
