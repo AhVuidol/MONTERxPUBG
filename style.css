@@ -730,7 +730,13 @@ box-shadow .35s ease;
 
     border-bottom:1px solid rgba(255,255,255,.05);
 
-    transition:.4s;
+    transition:.45s;
+}
+
+.game-card:hover img{
+
+transform:scale(1.04);
+
 }
 
 .game-card .image-box{
@@ -791,14 +797,20 @@ box-shadow .35s ease;
 
 .game-card-body h3{
   font-family:var(--font-display);
-  font-size:17px;
-  font-weight:700;
+  font-size:20px;
+font-weight:800;
 }
 
 .game-card-body > p{
-  font-size:13px;
-  color:var(--text-dim);
-  margin-top:3px;
+
+    font-size:15px;
+
+    color:#d7d7d7;
+
+    line-height:1.6;
+
+    margin-top:5px;
+
 }
 
 /* =====================================================
@@ -2046,8 +2058,44 @@ transform:translateY(0);
 
 }
 .game-card{
-    position:relative;
-    overflow:hidden;
+    background:rgba(20,20,28,.92);
+}
+
+.game-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-2px;
+
+    border-radius:30px;
+
+    padding:2px;
+
+    background:linear-gradient(
+        45deg,
+        #ff00ff,
+        #00ffff,
+        #7d5cff,
+        #00ff88,
+        #ff00ff
+    );
+
+    background-size:400% 400%;
+
+    animation:rgbBorder 8s linear infinite;
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+    mask-composite:exclude;
+
+    pointer-events:none;
+
 }
 
 .game-card::after{
@@ -2207,13 +2255,7 @@ body::after{
 }
 .game-card:hover{
 
-    transform:translateY(-8px);
-
-    box-shadow:
-
-        0 0 25px rgba(170,80,255,.35),
-
-        0 0 80px rgba(0,220,255,.15);
+transform:translateY(-10px) scale(1.01);
 
 }
 .buttons a:hover{
