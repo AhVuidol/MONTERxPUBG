@@ -1890,17 +1890,40 @@ footer,
 }
 
 #logoLoader img{
-    width:130px;
-    animation:logoIntro 2s ease forwards;
+    width:140px;
+    border-radius:50%;
+    animation:logoIntro 2.2s ease forwards;
+    filter:drop-shadow(0 0 8px #8a2be2)
+           drop-shadow(0 0 20px #b266ff)
+           drop-shadow(0 0 40px #7d2cff);
 }
 
 @keyframes logoIntro{
-    from{
-        transform:scale(.5) rotate(0deg);
+
+    0%{
+        transform:scale(.4) rotate(0deg);
         opacity:0;
     }
-    to{
-        transform:scale(1) rotate(720deg);
+
+    20%{
         opacity:1;
     }
+
+    50%{
+        transform:scale(1.1) rotate(360deg);
+    }
+
+    80%{
+        transform:scale(1) rotate(650deg);
+    }
+
+    100%{
+        transform:scale(1.15) rotate(720deg);
+        opacity:1;
+    }
+
+}
+#logoLoader{
+    transition:opacity .5s ease,
+               transform .5s ease;
 }
