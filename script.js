@@ -5,8 +5,22 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ---------- LOADER ---------- */
   const loader = document.getElementById("loader");
   window.addEventListener("load", () => {
+
+    const logoLoader = document.getElementById("logoLoader");
+
     if (loader) loader.style.display = "none";
-  });
+
+    setTimeout(() => {
+
+        logoLoader.style.opacity = "0";
+
+        setTimeout(() => {
+            logoLoader.remove();
+        }, 500);
+
+    }, 2000);
+
+});
 
   /* ---------- POPUP + NHẠC NỀN ---------- */
   const popup      = document.getElementById("popup");
