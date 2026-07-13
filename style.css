@@ -2155,15 +2155,17 @@ body::after{
 
     position:relative;
 
-    margin:32px 0 24px;
+    margin:28px 0 22px;
 
-    padding-left:20px;
+    padding-left:18px;
 
-    font-size:36px;
+    font-size:28px;
 
     font-weight:900;
 
-    letter-spacing:1px;
+    line-height:1.2;
+
+    letter-spacing:.5px;
 
     text-transform:uppercase;
 
@@ -2178,7 +2180,7 @@ body::after{
     -webkit-text-fill-color:transparent;
 
     text-shadow:
-        0 0 20px rgba(180,70,255,.45);
+        0 0 18px rgba(180,70,255,.45);
 
 }
 
@@ -2192,8 +2194,8 @@ body::after{
     left:0;
     top:4px;
 
-    width:6px;
-    height:42px;
+    width:5px;
+    height:34px;
 
     border-radius:10px;
 
