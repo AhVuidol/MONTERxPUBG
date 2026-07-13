@@ -12,7 +12,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setTimeout(() => {
 
-        logoLoader.style.opacity = "0";
+        if (logoLoader) {
+    logoLoader.style.opacity = "0";
+
+    setTimeout(() => {
+        logoLoader.remove();
+    }, 500);
+}
 
         setTimeout(() => {
             logoLoader.remove();
