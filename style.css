@@ -2057,8 +2057,11 @@ transform:translateY(0);
 }
 
 }
-.game-card{
-    background:rgba(20,20,28,.92);
+   .game-card{
+    background: rgba(20,20,28,.92);
+    position: relative;
+    overflow: hidden;
+    transition: transform .3s ease, box-shadow .3s ease;
 }
 
 .game-card::after{
@@ -2254,10 +2257,14 @@ body::after{
     }
 }
 .game-card:hover{
+    transform: translateY(-8px) scale(1.02);
 
-transform:translateY(-10px) scale(1.01);
-
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.45),
+        0 0 25px rgba(170,70,255,.35),
+        0 0 45px rgba(80,180,255,.25);
 }
+
 .buttons a:hover{
 
     transform:
