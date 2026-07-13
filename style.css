@@ -46,7 +46,8 @@ html{
 }
 
 body{
-  background:var(--bg);
+  background:
+  radial-gradient(circle at top,#24103f 0%,#0b0714 35%,#050505 100%);
   color:var(--text);
   font-family:var(--font-body);
   padding-bottom:56px;
@@ -362,12 +363,13 @@ animation:textGlow 5s linear infinite;
 
     padding:18px 20px;
 
-    background:rgba(15,15,20,.78);
+    background:
+rgba(12,8,22,.82);
 
-    backdrop-filter:blur(18px);
-    -webkit-backdrop-filter:blur(18px);
+backdrop-filter:blur(18px);
 
-    border-bottom:1px solid rgba(255,255,255,.06);
+border-bottom:
+1px solid rgba(160,90,255,.18);
 
     box-shadow:
         0 10px 30px rgba(0,0,0,.35);
@@ -627,10 +629,17 @@ animation:textGlow 5s linear infinite;
 
     position:relative;
 
-    border:1px solid rgba(255,255,255,.06);
+    border:1px solid rgba(170,120,255,.22);
 
-    box-shadow:
-        0 12px 25px rgba(0,0,0,.45);
+background:
+linear-gradient(
+180deg,
+rgba(45,20,75,.85),
+rgba(18,12,30,.92)
+);
+
+box-shadow:
+0 0 25px rgba(125,70,255,.18);
 
     transition:.25s;
 
@@ -817,14 +826,14 @@ BUTTONS
     color:#fff;
 
     background:linear-gradient(
-        180deg,
-        #32b8ff,
-        #007dff
-    );
+180deg,
+#9b5cff,
+#5b21b6
+);
 
-    box-shadow:
-        0 0 18px rgba(0,145,255,.45),
-        inset 0 1px rgba(255,255,255,.25);
+box-shadow:
+0 0 20px rgba(155,92,255,.55),
+inset 0 1px rgba(255,255,255,.20);
 
 }
 
@@ -832,16 +841,16 @@ BUTTONS
 
 .buttons .key{
 
-    color:#2b1d00;
+    color:#ffffff;
 
     background:linear-gradient(
-        180deg,
-        #ffe76b,
-        #ffb300
-    );
+180deg,
+#b06cff,
+#7c3aed
+);
 
     box-shadow:
-        0 0 18px rgba(255,190,0,.45),
+0 0 20px rgba(155,92,255,.55),
         inset 0 1px rgba(255,255,255,.35);
 
 }
@@ -853,13 +862,13 @@ BUTTONS
     color:#fff;
 
     background:linear-gradient(
-        180deg,
-        #ff5cff,
-        #a300ff
-    );
+180deg,
+#d946ef,
+#7e22ce
+);
 
     box-shadow:
-        0 0 18px rgba(220,0,255,.45),
+0 0 20px rgba(217,70,239,.55),
         inset 0 1px rgba(255,255,255,.25);
 
 }
@@ -1926,4 +1935,42 @@ footer,
 #logoLoader{
     transition:opacity .5s ease,
                transform .5s ease;
+}
+body::before{
+content:"";
+position:fixed;
+inset:0;
+pointer-events:none;
+
+background:
+radial-gradient(circle at 20% 15%,
+rgba(153,69,255,.22),
+transparent 35%),
+
+radial-gradient(circle at 80% 70%,
+rgba(97,82,255,.18),
+transparent 35%),
+
+radial-gradient(circle at 50% 100%,
+rgba(180,80,255,.12),
+transparent 40%);
+
+animation:bgMove 12s ease-in-out infinite;
+z-index:-2;
+}
+
+@keyframes bgMove{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-20px);
+}
+
+100%{
+transform:translateY(0);
+}
+
 }
