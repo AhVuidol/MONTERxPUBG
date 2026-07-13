@@ -636,7 +636,7 @@ border-bottom:
 
     position:relative;
 
-    border:1px solid rgba(170,120,255,.22);
+    border:1px solid rgba(185,90,255,.28);
 
 background:
 linear-gradient(
@@ -646,19 +646,14 @@ rgba(18,12,30,.92)
 );
 
 box-shadow:
-0 0 25px rgba(125,70,255,.18);
+0 0 25px rgba(130,40,255,.18),
+0 0 60px rgba(80,0,180,.12);
 
-    transition:.25s;
+transition:
+transform .35s ease,
+box-shadow .35s ease;
+);
 
-   backdrop-filter:blur(12px);
-
-background:rgba(18,18,28,.88);
-
-border:1px solid rgba(180,120,255,.18);
-
-box-shadow:
-0 0 40px rgba(120,50,255,.18);
-}
 .game-card::before{
 
     content:"";
@@ -2111,4 +2106,15 @@ body::after{
     to{
         transform:translateY(-250px);
     }
+}
+.game-card:hover{
+
+    transform:
+    translateY(-6px)
+    scale(1.01);
+
+    box-shadow:
+    0 0 35px rgba(180,70,255,.35),
+    0 0 80px rgba(100,20,255,.18);
+
 }
