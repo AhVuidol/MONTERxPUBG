@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
         if (logoLoader) {
             logoLoader.style.opacity = "0";
+logoLoader.style.transform = "scale(1.5)";
 
             setTimeout(() => {
                 logoLoader.style.display = "none";
