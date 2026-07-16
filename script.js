@@ -128,7 +128,7 @@ const downloadMessage = document.getElementById("downloadMessage");
 
 let currentLink = "";
 
-document.querySelectorAll(".install,.key,.ipa,.apk64,.apk32,.tipa,.allgame").forEach(btn=>{
+document.querySelectorAll(".install,.key,.ipa,.apk64,.apk32,.tipa,.allgame,.adrff").forEach(btn=>{
 
     btn.addEventListener("click",function(e){
 
@@ -208,6 +208,16 @@ if(this.classList.contains("allgame")){
             downloadMessage.innerHTML=`
             Tải Game Nào<br><br>
             Lấy Đúng Key Game Đó Nhé
+            `;
+
+        }
+       if(this.classList.contains("adrff")){
+
+            downloadTitle.innerHTML="Link All";
+
+            downloadMessage.innerHTML=`
+            Tất Cả File Trong Đây<br><br>
+            Đọc Kỹ Lưu Ý Nhé
             `;
 
         }
