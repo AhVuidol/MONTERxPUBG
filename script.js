@@ -141,8 +141,8 @@ document.querySelectorAll(".install,.key,.ipa,.apk64,.apk32,.tipa,.allgame,.adrf
             downloadTitle.innerHTML="LINK TRỰC TIẾP";
 
             downloadMessage.innerHTML=`
-            Nếu Link Trực Tiếp Cài Lỗi<br><br>
-            Hãy Cài Link iPA
+            Link Trực Tiếp Bị Thu Hồi CC<br><br>
+            Hãy Chuyển Qua Cài iPA
             `;
 
         }
@@ -163,7 +163,7 @@ document.querySelectorAll(".install,.key,.ipa,.apk64,.apk32,.tipa,.allgame,.adrf
             downloadTitle.innerHTML="LINK IPA";
 
             downloadMessage.innerHTML=`
-            Cài Đúng iPA<br><br>
+            CÀI ĐÚNG iPA GAME<br><br>
             Và Lấy Đúng Key Của Game
             `;
 
